@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'DreamAvenue';
+  src: url('../fonts/dreamAvenue.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.welcome {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.welcome-tittle {
+  color: #E8D9F4;
+
+  font-family: "Dream Avenue";
+  font-size: 68.052px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.welcome__title {
+  color: #E8D9F4;
+  font-family: 'DreamAvenue';
+  font-size: 68.052px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  width: 534.161px;
+  margin-bottom: 39px;
+}
+
+.welcome__semi-tittle {
+  color: #FFF;
+  font-family: Philosopher;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.8; 
+}
+
+.welcome__wrapper-paragraph{
+  display: inline-flex;
+  gap: 44px;
+  align-items: center;
+  justify-content: start;
+  
+  margin-top: 22px;
+}
+
+.welcome__vertical-line {
+  height: 322px;
+  border: 1px #E8D9F4 solid;
+ 
+}
+
+.welcome__paragraph {
+  color: #FFF;
+  font-family: "Nunito Sans";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  opacity: 0.7;
+  width: 677.276px;
+}
+
+.welcome__paragraph p:nth-child(1) {
+  margin-bottom: 30px;
+}

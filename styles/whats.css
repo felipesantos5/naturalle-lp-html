@@ -1,0 +1,137 @@
+.whatsapp-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 200px;
+  right: 60px;
+  width: 340px;
+  height: 393px;
+
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+  opacity: 0; /* Start hidden */
+  visibility: hidden; /* Start hidden */
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Transition for fade-in */
+}
+
+.chat-box-show {
+  opacity: 1; /* Show chat box */
+  visibility: visible; /* Show chat box */
+} 
+
+.chat__header {
+  background: #82AC6E;
+  padding: 20px 25px;
+  border-radius: 8px 8px 0px 0px;
+  box-shadow: 12.945px 12.945px 41.423px 0px rgba(0, 0, 0, 0.25), 0px 10px 60px 0px rgba(38, 45, 118, 0.08);
+  z-index: 1000;
+}
+
+.chat__header__wrapper {
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+}
+
+.chat__header__title {
+  font-family: Philosopher;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.chat__header__paragraph {
+  font-family: Philosopher;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.chat__header__button-close {
+  background-color: transparent;
+  margin-bottom: 2px;
+  position: absolute;
+  right: 12px;
+
+}
+
+.chat__body {
+  background: #F4E7D9;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 12.945px 12.945px 41.423px 0px rgba(0, 0, 0, 0.25), 0px 10px 60px 0px rgba(38, 45, 118, 0.08);
+  z-index: 1000;
+}
+
+.chat__body__box {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="240" height="198" viewBox="0 0 240 198" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.4896 0.386719H2.5238C0.301296 0.386719 -0.665756 3.19719 1.08618 4.56475L10.4896 11.9051V189.075C10.4896 193.493 14.0713 197.075 18.4896 197.075H231.999C236.417 197.075 239.999 193.493 239.999 189.075V8.38672C239.999 3.96844 236.417 0.386719 231.999 0.386719H13.0944H10.4896Z" fill="white"/></svg>') no-repeat center center;
+  background-size: contain;
+  width: 240px;
+  height: 198px;
+  padding: 12px;
+
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chat__body__paragraph {
+  color: #5A154C;
+
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+
+  margin-left: 15px;
+}
+
+.chat__body__paragraph-strong {
+  color: #5A154C;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+
+.chat__body__button {
+  display: flex;
+  height: 42px;
+  padding: 5.967px 37px 6.033px 37px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 9.484px;
+  background: #83AC6E;
+  
+
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20.31px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+
+}
+
+.chat__body__button:hover {
+  background-color: #8eb87a; 
+  transition: 0.5s;
+}

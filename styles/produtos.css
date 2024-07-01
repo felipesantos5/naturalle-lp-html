@@ -1,0 +1,167 @@
+.products {
+  background-color: #83ac6e;
+  color: #fff;
+
+  padding-bottom: 70px;
+}
+
+.products-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-title {
+  color: #FFF;
+  text-align: center;
+  font-family: Philosopher;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  padding-top: 80px;
+  margin-bottom: 15px;
+}
+
+.products-paragraph {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+
+  margin-bottom: 60px;
+}
+
+.products__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 39px;
+  
+}
+
+.products__card-container {
+  display: flex;
+  gap: 45px;
+  border-radius: 20px;
+  background: #FFF;
+  padding-right: 43x;
+  padding-left: 20px;
+  padding: 20px 43px 20px 20px;
+  box-shadow: 12.945px 12.945px 41.423px 0px rgba(0, 0, 0, 0.25);
+}
+
+.products__card-img {
+  width: 365px;
+  border-radius: 10px;
+}
+
+.products__card-wrapper-text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 39px;
+}
+
+.products__card-title {
+  color: #5A154C;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.products__card-circle{
+  display: flex;
+  gap: 11.5px;
+}
+
+.products__card-circle-text {
+  display: inline-block;
+  padding-block: 1px;
+  padding-inline: 8px;
+
+  color: #83ac6e;
+  border-radius: 9px;
+  border: 2px #83ac6e solid;
+
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18.392px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.736px;
+}
+
+.products__card-paragraph {
+  color: #5a154c;
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.products__card-bottle-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.button-info {
+  display: flex;
+  width: 274.707px;
+
+  padding: 17.707px 25.783px 16.188px 25.88px;
+  justify-content: center;
+  align-items: center;
+  gap: 14.155px;
+  flex-shrink: 0;
+
+  border-radius: 11.805px;
+  background: var(--d-9-d-9-d-9, #5a154c);
+}
+
+.products__footer {
+  padding-bottom: 100px;
+}
+
+.products__footer-tittle {
+  color: #FFF;
+  text-align: center;
+  font-family: Philosopher;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  margin-bottom: 39px;
+}
+
+.products__footer-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.products__footer-button {
+  display: inline-flex;
+  padding: 17.879px 26.93px 15.596px 27.398px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 13.41px;
+  flex-shrink: 0;
+  border-radius: 11.92px;
+  background: #5A154C;
+
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 25.527px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
