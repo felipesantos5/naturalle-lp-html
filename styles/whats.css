@@ -9,21 +9,21 @@
 
 .chat-box {
   position: fixed;
-  bottom: 200px;
+  bottom: 220px;
   right: 60px;
   width: 340px;
   height: 393px;
 
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 
-  opacity: 0; /* Start hidden */
-  visibility: hidden; /* Start hidden */
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Transition for fade-in */
 }
 
 .chat-box-show {
-  opacity: 1; /* Show chat box */
-  visibility: visible; /* Show chat box */
+  opacity: 1;
+  visibility: visible;
 } 
 
 .chat__header {

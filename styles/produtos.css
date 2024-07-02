@@ -43,6 +43,7 @@
   
 }
 
+
 .products__card-container {
   display: flex;
   gap: 45px;
@@ -109,8 +110,12 @@
 
 .products__card-bottle-wrapper {
   display: flex;
-  gap: 30px;
+  gap: 10px;
 }
+
+.products__card-bottle-wrapper img {
+  width: 110px;
+}	
 
 .button-info {
   display: flex;

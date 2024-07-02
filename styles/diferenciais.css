@@ -94,3 +94,8 @@
   line-height: 170%;
 }
 
+@media (max-width: 1600px) {
+  .difference {
+    padding-inline: 40px;
+  }
+}

@@ -31,27 +31,56 @@
   <link rel="stylesheet" href="styles/footer.css">
 
   <script src="/scripts/whats.js" defer></script>
+  <script src="/scripts/header.js"></script>
+  <script src="/scripts/card.js" defer></script>
 </head>
 
 <body>
   <div>
     <header class="bg-header-image">
+
       <div class="header__line">
         <section class="header">
-          <img src="/assets/logo.png" alt="logo Naturalle" />
+          <img src="/assets/logo.png" alt="logo Naturalle" class="header__logo" />
           <nav class="header__nav">
-            <a href="" class="header__nav-item">Produtos</a>
-            <a href="" class="header__nav-item">Contato</a>
+            <a href="#produtos" class="header__nav-item">Produtos</a>
+            <a href="#contato" class="header__nav-item">Contato</a>
           </nav>
+          <button class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </button>
         </section>
       </div>
+
+      <div class="slide-menu" id="slideMenu">
+        <div class="slide-wrapper">
+          <div class="slide-wrapper-button">
+            <nav class="slide-menu__nav">
+              <a href="" class="header__nav-item-slide">Produtos</a>
+              <button class="hamburger" id="closeButton">
+                <div class="bar-slide"></div>
+                <div class="bar-slide"></div>
+                <div class="bar-slide"></div>
+              </button>
+          </div>
+          <a href="" class="header__nav-item-slide">Contato</a>
+          </nav>
+
+
+        </div>
+        <img src="/assets/Vector.png" alt="">
+      </div>
+
+
       <div class="welcome">
-        <h1 class="welcome__title">Bem-vindo à Naturalle Express</h1>
+        <h1 class="welcome__title">Bem-vindo à Naturalle</h1>
         <h2 class="welcome__semi-tittle">A Sua Saúde em Boas Mãos</h2>
         <div class="welcome__wrapper-paragraph">
           <hr class="welcome__vertical-line" />
           <div class="welcome__paragraph">
-            <p>Na Naturalle Express, nossa missão é oferecer soluções de saúde personalizadas e de alta
+            <p>Na Naturalle, nossa missão é oferecer soluções de saúde personalizadas e de alta
               qualidade,
               feitas especialmente para você.</p>
             <p>Com mais de 9 anos de experiência no mercado, somos reconhecidos pela excelência em manipulação
@@ -68,7 +97,13 @@
         <section class="difference__card-wrapper">
 
           <div class="difference__card-container">
-            <div class="difference__card-icon background__icon1"></div>
+            <div class="difference__card-icon background__icon1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="47" height="56" viewBox="0 0 47 56" fill="none">
+                <path
+                  d="M39.6875 9.34779C38.0675 10.3514 37.2519 12.2262 36.8639 13.5146C35.3644 14.3541 33.9738 15.3267 32.6789 16.3939C32.3776 14.9716 31.7825 12.7207 30.9142 12.0042C29.6127 10.9301 27.687 11.1145 26.613 12.416C25.5389 13.7175 25.7233 15.6432 27.0248 16.7172C27.8194 17.373 29.8338 17.5601 31.2844 17.6071C29.1123 19.6225 27.2491 21.9092 25.6503 24.2843C25.7646 23.0322 25.77 21.6611 25.3721 20.9674C24.5325 19.5036 22.6653 18.9976 21.2015 19.8373C19.7378 20.6768 19.2318 22.544 20.0715 24.0078C20.6485 25.0137 22.8836 26.0106 24.2255 26.5359C20.138 33.4133 18.134 40.5526 17.3786 43.7559C13.7715 40.6632 11.8328 36.4685 10.5998 33.6212C11.6738 34.4432 13.0071 35.309 13.8892 35.3294C15.5761 35.3682 16.9752 34.0322 17.0141 32.3451C17.053 30.6582 15.7168 29.2591 14.0299 29.2203C12.8512 29.1931 10.797 30.6354 9.66397 31.5084C9.55146 31.2745 9.44198 31.0568 9.33596 30.8751C9.00731 30.2415 8.94736 27.2136 9.03571 24.1737C10.1126 25.1312 12.0152 26.671 13.1735 26.7288C14.8588 26.8129 16.2932 25.5149 16.3773 23.8296C16.4615 22.1442 15.1635 20.7098 13.4782 20.6257C12.3129 20.5675 10.25 21.9259 9.08679 22.7705C9.13311 21.7189 9.19505 20.7095 9.26869 19.8505C9.39295 18.4323 9.64212 17.0029 9.9966 15.5862C11.1149 16.5125 12.9951 17.92 14.1266 17.9413C15.8137 17.973 17.2071 16.6309 17.2387 14.9439C17.2704 13.2567 15.9284 11.8633 14.2413 11.8317C13.2707 11.8135 11.7109 12.7946 10.5589 13.6321C11.006 12.2602 11.5527 10.9123 12.2006 9.61379C13.4707 9.17585 15.2299 8.31493 16.1569 6.72268C17.7092 4.05626 16.3286 0.358398 16.3286 0.358398C16.3286 0.358398 12.4311 0.983512 10.8789 3.64987C9.94186 5.25926 10.0744 7.23972 10.3259 8.56076C10.3195 8.57245 10.308 8.57926 10.3019 8.59128C9.6506 9.88963 9.09019 11.2351 8.62533 12.6062C8.29025 11.2856 7.77437 9.75245 7.08603 9.18439C5.78453 8.11035 3.85881 8.29475 2.78477 9.59625C1.71072 10.8977 1.89506 12.8234 3.19656 13.8975C4.09141 14.636 6.53667 14.7812 7.97728 14.7998C7.55848 16.4135 7.26491 18.0455 7.12272 19.6654C7.12117 19.6844 7.0911 20.0611 7.0512 20.6721C6.52581 19.6389 5.88245 18.628 5.24436 18.2739C3.76886 17.4552 1.90907 17.9877 1.09036 19.4633C0.27172 20.9388 0.804117 22.7986 2.27968 23.6173C3.23878 24.1495 5.45838 23.9076 6.89828 23.6732C6.80929 26.0776 6.79284 28.9868 7.10434 30.741C6.01179 29.9344 4.6513 29.0829 3.76346 29.0789C2.076 29.0712 0.701891 30.433 0.694245 32.1204C0.686664 33.8078 2.04837 35.1818 3.73577 35.1895C4.87465 35.1946 6.80512 33.8133 7.94194 32.9136C8.08002 33.2219 8.22715 33.5622 8.38579 33.9313C9.01823 35.4005 9.83784 37.3042 10.9986 39.2868C8.78943 39.3591 4.44955 40.3323 3.53479 46.7439C3.53479 46.7439 6.7009 44.5578 9.95317 44.8162C11.2655 44.9215 12.7657 43.8262 13.6546 43.0488C14.6218 44.1832 15.7405 45.2649 17.0389 46.2288C17.0961 47.3351 17.0447 50.436 15.0329 53.3314C14.6937 53.8194 14.8141 54.4904 15.3026 54.8301C15.4903 54.9604 15.7044 55.0225 15.9163 55.0225C16.257 55.0225 16.5925 54.8616 16.8018 54.5598C19.4712 50.7191 19.2503 46.6272 19.1593 45.7036C19.2568 45.2196 19.6266 43.4879 20.3617 41.0411C24.5957 39.4307 30.6298 40.6917 30.6298 40.6917C28.2978 36.4069 24.1114 36.03 22.0453 36.1312C22.9861 33.6989 24.1873 31.028 25.6947 28.3802C26.1478 29.7647 26.9141 31.7156 27.7868 32.3042C29.1858 33.2477 31.0848 32.8784 32.0283 31.4794C32.9718 30.0804 32.6025 28.1814 31.2035 27.238C30.3034 26.631 28.1072 26.6722 26.6517 26.7786C28.3809 23.9977 30.4587 21.3055 32.9489 19.0196C33.03 20.4767 33.2704 22.6495 33.9851 23.462C35.0996 24.7291 37.0302 24.8529 38.2972 23.7384C39.5643 22.624 39.688 20.6934 38.5736 19.4263C37.8637 18.6192 35.7622 18.1046 34.3278 17.8366C35.4667 16.9166 36.6799 16.0788 37.9787 15.3567C38.032 15.3271 38.0659 15.2796 38.1121 15.2428C39.4378 15.4453 41.3607 15.4955 42.9039 14.5395C45.5267 12.9146 46.0446 9.00159 46.0446 9.00159C46.0446 9.00159 42.3102 7.7229 39.6875 9.34779Z"
+                  fill="white" />
+              </svg>
+            </div>
             <h3 class="difference__card-tittle">Qualidade e Segurança</h3>
             <p class="difference__card-paragraph">Utilizamos apenas princípios ativos aprovados por órgãos reguladores,
               garantindo a
@@ -123,10 +158,10 @@
         </section>
       </section>
 
-      <section class="products">
+      <section class="products" id="produtos">
         <div class="products-wrapper">
           <h2 class="products-title">Produtos & Tratamentos</h2>
-          <p class="products-paragraph">Na Naturalle Express, oferecemos uma ampla gama de produtos e tratamentos
+          <p class="products-paragraph">Na Naturalle, oferecemos uma ampla gama de produtos e tratamentos
             personalizados para diversas condições de saúde, incluindo:</p>
           <section class="products__card-wrapper">
 
@@ -143,9 +178,9 @@
                   dores
                   específicas, proporcionando qualidade de vida, disposição e saúde.</p>
                 <div class="products__card-bottle-wrapper">
-                  <img src="/assets/card-produtos/frasco.png" alt="produto naturalle morosil" />
-                  <img src="/assets/card-produtos/frasco.png" alt="produto naturalle morosil" />
-                  <img src="/assets/card-produtos/frasco.png" alt="produto naturalle morosil " />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil " />
                 </div>
               </div>
             </div>
@@ -162,9 +197,9 @@
                 <p class="products__card-paragraph">Fórmulas que não se resumem apenas para a estética e sim para
                   solucionar suas dores, inchaços, cansaço e hematomas.</p>
                 <div class="products__card-bottle-wrapper">
-                  <img src="/assets/card-produtos/frasco.png" alt="produto naturalle morosil" />
-                  <img src="/assets/card-produtos/frasco.png" alt="produto naturalle morosil" />
-                  <img src="/assets/card-produtos/frasco.png" alt="produto naturalle morosil " />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil " />
                 </div>
               </div>
             </div>
@@ -180,9 +215,9 @@
                 <p class="products__card-paragraph">Formulação personalizada para lhe ajudar a manter o peso ideal, com
                   saúde e eficácia.</p>
                 <div class="products__card-bottle-wrapper">
-                  <img src="/assets/card-produtos/frasco.png" alt="produto naturalle morosil" />
-                  <img src="/assets/card-produtos/frasco.png" alt="produto naturalle morosil" />
-                  <img src="/assets/card-produtos/frasco.png" alt="produto naturalle morosil " />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil " />
                 </div>
               </div>
             </div>
@@ -198,9 +233,9 @@
                 <p class="products__card-paragraph">Fórmulas personalizadas com o segredo para ter uma pele saudável!
                 </p>
                 <div class="products__card-bottle-wrapper">
-                  <img src="/assets/card-produtos/frasco.png" alt="produto naturalle morosil" />
-                  <img src="/assets/card-produtos/frasco.png" alt="produto naturalle morosil" />
-                  <img src="/assets/card-produtos/frasco.png" alt="produto naturalle morosil " />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil " />
                 </div>
               </div>
             </div>
@@ -230,46 +265,220 @@
                   stroke="white" stroke-width="2.30557" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg> 21 2035-0080
             </button>
-            <button class="products__footer-button">
+
+            <a href="https://wa.me/5521989394901" class="products__footer-button">
               <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
                 <path
                   d="M30.2145 7.30652C27.1662 4.2509 23.1065 2.57031 18.7923 2.57031C9.88735 2.57031 2.64116 9.8165 2.64116 18.7214C2.64116 21.5661 3.38324 24.3452 4.79465 26.797L2.50293 35.1636L11.0659 32.9155C13.4231 34.2033 16.0786 34.8799 18.785 34.8799H18.7923C27.69 34.8799 35.0962 27.6337 35.0962 18.7287C35.0962 14.4145 33.2628 10.3621 30.2145 7.30652ZM18.7923 32.1589C16.3769 32.1589 14.0124 31.5114 11.9535 30.2892L11.4661 29.9981L6.38793 31.3295L7.74114 26.3751L7.42102 25.8658C6.0751 23.7268 5.36939 21.2605 5.36939 18.7214C5.36939 11.3225 11.3933 5.29855 18.7996 5.29855C22.3863 5.29855 25.7547 6.6954 28.2865 9.23448C30.8183 11.7736 32.3753 15.142 32.368 18.7287C32.368 26.135 26.1913 32.1589 18.7923 32.1589ZM26.1549 22.1045C25.7547 21.9008 23.7686 20.9259 23.3976 20.7949C23.0265 20.6567 22.7573 20.5912 22.4881 20.9986C22.219 21.406 21.4478 22.3082 21.2077 22.5846C20.9749 22.8538 20.7348 22.8902 20.3347 22.6865C17.9629 21.5006 16.406 20.5694 14.8418 17.8848C14.4271 17.1718 15.2565 17.2227 16.0277 15.6804C16.1586 15.4112 16.0932 15.1784 15.9913 14.9747C15.8895 14.771 15.0819 12.7848 14.7472 11.9773C14.4199 11.1915 14.0852 11.3007 13.8378 11.2861C13.605 11.2716 13.3358 11.2716 13.0666 11.2716C12.7975 11.2716 12.3609 11.3734 11.9899 11.7736C11.6189 12.181 10.5785 13.1559 10.5785 15.142C10.5785 17.1282 12.0263 19.0488 12.2227 19.318C12.4264 19.5872 15.0674 23.6614 19.1197 25.4147C21.6806 26.5206 22.6846 26.6151 23.965 26.426C24.7435 26.3096 26.3513 25.4511 26.686 24.5053C27.0206 23.5595 27.0206 22.752 26.9188 22.5846C26.8242 22.4027 26.555 22.3009 26.1549 22.1045Z"
                   fill="white"></path>
-              </svg>21 989394901
-            </button>
+              </svg>
+              21 989394901
+            </a>
           </div>
         </div>
       </section>
 
       <section class="depoiments">
 
-        <h2>Depoimentos de Clientes</h2>
+        <div class="depoiments__container">
+          <div class="depoiments__container-background-text">Depoimentos
+          </div>
+          <h3 class="depoiments__container-tittle">Depoimentos de Clientes
+          </h3>
+        </div>
 
-        <div></div>
+        <div class="depoiments__carousel">
+          <div class="depoiments__carousel-track">
 
-        <div class="">
-          <button>
-            <svg xmlns="http://www.w3.org/2000/svg" width="124" height="41" viewBox="0 0 124 41" fill="none">
-              <rect x="-0.5" y="0.5" width="39" height="39" rx="19.5" transform="matrix(-1 0 0 1 39.7012 0.832031)"
-                stroke="#5A154C"></rect>
-              <path
-                d="M11.6545 21.1856C11.4592 20.9903 11.4592 20.6737 11.6545 20.4785L14.8365 17.2965C15.0317 17.1012 15.3483 17.1012 15.5436 17.2965C15.7389 17.4918 15.7389 17.8083 15.5436 18.0036L12.7152 20.832L15.5436 23.6605C15.7389 23.8557 15.7389 24.1723 15.5436 24.3676C15.3483 24.5628 15.0317 24.5628 14.8365 24.3676L11.6545 21.1856ZM29.3945 21.332L12.0081 21.332L12.0081 20.332L29.3945 20.332L29.3945 21.332Z"
-                fill="#5A154C"></path>
-            </svg>
-          </button>
+            <div class="depoiments__carousel-card">
+              <p class="depoiments__carousel-paragraph">"A Naturalle transformou minha vida. O tratamento personalizado
+                que recebi fez toda a diferença no
+                controle da minha condição de saúde."</p>
+              <p class="depoiments__carousel-person">Maria S.</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="98" height="18" viewBox="0 0 98 18" fill="none">
+                <path
+                  d="M9.28217 0.884521L12.1764 5.39047L17.3561 6.75059L13.9651 10.8955L14.2721 16.2421L9.28217 14.2979L4.2922 16.2421L4.59929 10.8955L1.20823 6.75059L6.38799 5.39047L9.28217 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M29.2929 0.884521L32.1871 5.39047L37.3669 6.75059L33.9758 10.8955L34.2829 16.2421L29.2929 14.2979L24.3029 16.2421L24.61 10.8955L21.219 6.75059L26.3987 5.39047L29.2929 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M49.3039 0.884521L52.1981 5.39047L57.3778 6.75059L53.9868 10.8955L54.2939 16.2421L49.3039 14.2979L44.3139 16.2421L44.621 10.8955L41.23 6.75059L46.4097 5.39047L49.3039 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M69.3146 0.884521L72.2088 5.39047L77.3886 6.75059L73.9975 10.8955L74.3046 16.2421L69.3146 14.2979L64.3247 16.2421L64.6318 10.8955L61.2407 6.75059L66.4205 5.39047L69.3146 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M89.3256 0.884521L92.2198 5.39047L97.3996 6.75059L94.0085 10.8955L94.3156 16.2421L89.3256 14.2979L84.3357 16.2421L84.6427 10.8955L81.2517 6.75059L86.4314 5.39047L89.3256 0.884521Z"
+                  fill="#FBA333" />
+              </svg>
+            </div>
 
-          <button>
-            <svg xmlns="http://www.w3.org/2000/svg" width="124" height="41" viewBox="0 0 124 41" fill="none">
-              <rect x="83.7988" y="1.33203" width="39" height="39" rx="19.5" stroke="#5A154C"></rect>
-              <path
-                d="M112.345 21.1856C112.541 20.9903 112.541 20.6737 112.345 20.4785L109.164 17.2965C108.968 17.1012 108.652 17.1012 108.456 17.2965C108.261 17.4918 108.261 17.8083 108.456 18.0036L111.285 20.832L108.456 23.6605C108.261 23.8557 108.261 24.1723 108.456 24.3676C108.652 24.5628 108.968 24.5628 109.164 24.3676L112.345 21.1856ZM94.6055 21.332L111.992 21.332L111.992 20.332L94.6055 20.332L94.6055 21.332Z"
-                fill="#5A154C"></path>
-            </svg>
-          </button>
+            <div class="depoiments__carousel-card">
+              <p class="depoiments__carousel-paragraph">"A Naturalle transformou minha vida. O tratamento personalizado
+                que recebi fez toda a diferença no
+                controle da minha condição de saúde."</p>
+              <p class="depoiments__carousel-person">Maria S.</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="98" height="18" viewBox="0 0 98 18" fill="none">
+                <path
+                  d="M9.28217 0.884521L12.1764 5.39047L17.3561 6.75059L13.9651 10.8955L14.2721 16.2421L9.28217 14.2979L4.2922 16.2421L4.59929 10.8955L1.20823 6.75059L6.38799 5.39047L9.28217 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M29.2929 0.884521L32.1871 5.39047L37.3669 6.75059L33.9758 10.8955L34.2829 16.2421L29.2929 14.2979L24.3029 16.2421L24.61 10.8955L21.219 6.75059L26.3987 5.39047L29.2929 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M49.3039 0.884521L52.1981 5.39047L57.3778 6.75059L53.9868 10.8955L54.2939 16.2421L49.3039 14.2979L44.3139 16.2421L44.621 10.8955L41.23 6.75059L46.4097 5.39047L49.3039 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M69.3146 0.884521L72.2088 5.39047L77.3886 6.75059L73.9975 10.8955L74.3046 16.2421L69.3146 14.2979L64.3247 16.2421L64.6318 10.8955L61.2407 6.75059L66.4205 5.39047L69.3146 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M89.3256 0.884521L92.2198 5.39047L97.3996 6.75059L94.0085 10.8955L94.3156 16.2421L89.3256 14.2979L84.3357 16.2421L84.6427 10.8955L81.2517 6.75059L86.4314 5.39047L89.3256 0.884521Z"
+                  fill="#FBA333" />
+              </svg>
+            </div>
+
+            <div class="depoiments__carousel-card">
+              <p class="depoiments__carousel-paragraph">"4"</p>
+              <p class="depoiments__carousel-person">Maria S.</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="98" height="18" viewBox="0 0 98 18" fill="none">
+                <path
+                  d="M9.28217 0.884521L12.1764 5.39047L17.3561 6.75059L13.9651 10.8955L14.2721 16.2421L9.28217 14.2979L4.2922 16.2421L4.59929 10.8955L1.20823 6.75059L6.38799 5.39047L9.28217 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M29.2929 0.884521L32.1871 5.39047L37.3669 6.75059L33.9758 10.8955L34.2829 16.2421L29.2929 14.2979L24.3029 16.2421L24.61 10.8955L21.219 6.75059L26.3987 5.39047L29.2929 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M49.3039 0.884521L52.1981 5.39047L57.3778 6.75059L53.9868 10.8955L54.2939 16.2421L49.3039 14.2979L44.3139 16.2421L44.621 10.8955L41.23 6.75059L46.4097 5.39047L49.3039 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M69.3146 0.884521L72.2088 5.39047L77.3886 6.75059L73.9975 10.8955L74.3046 16.2421L69.3146 14.2979L64.3247 16.2421L64.6318 10.8955L61.2407 6.75059L66.4205 5.39047L69.3146 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M89.3256 0.884521L92.2198 5.39047L97.3996 6.75059L94.0085 10.8955L94.3156 16.2421L89.3256 14.2979L84.3357 16.2421L84.6427 10.8955L81.2517 6.75059L86.4314 5.39047L89.3256 0.884521Z"
+                  fill="#FBA333" />
+              </svg>
+            </div>
+
+            <div class="depoiments__carousel-card">
+              <p class="depoiments__carousel-paragraph">"3"</p>
+              <p class="depoiments__carousel-person">Maria S.</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="98" height="18" viewBox="0 0 98 18" fill="none">
+                <path
+                  d="M9.28217 0.884521L12.1764 5.39047L17.3561 6.75059L13.9651 10.8955L14.2721 16.2421L9.28217 14.2979L4.2922 16.2421L4.59929 10.8955L1.20823 6.75059L6.38799 5.39047L9.28217 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M29.2929 0.884521L32.1871 5.39047L37.3669 6.75059L33.9758 10.8955L34.2829 16.2421L29.2929 14.2979L24.3029 16.2421L24.61 10.8955L21.219 6.75059L26.3987 5.39047L29.2929 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M49.3039 0.884521L52.1981 5.39047L57.3778 6.75059L53.9868 10.8955L54.2939 16.2421L49.3039 14.2979L44.3139 16.2421L44.621 10.8955L41.23 6.75059L46.4097 5.39047L49.3039 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M69.3146 0.884521L72.2088 5.39047L77.3886 6.75059L73.9975 10.8955L74.3046 16.2421L69.3146 14.2979L64.3247 16.2421L64.6318 10.8955L61.2407 6.75059L66.4205 5.39047L69.3146 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M89.3256 0.884521L92.2198 5.39047L97.3996 6.75059L94.0085 10.8955L94.3156 16.2421L89.3256 14.2979L84.3357 16.2421L84.6427 10.8955L81.2517 6.75059L86.4314 5.39047L89.3256 0.884521Z"
+                  fill="#FBA333" />
+              </svg>
+            </div>
+
+            <div class="depoiments__carousel-card">
+              <p class="depoiments__carousel-paragraph">"2"</p>
+              <p class="depoiments__carousel-person">Maria S.</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="98" height="18" viewBox="0 0 98 18" fill="none">
+                <path
+                  d="M9.28217 0.884521L12.1764 5.39047L17.3561 6.75059L13.9651 10.8955L14.2721 16.2421L9.28217 14.2979L4.2922 16.2421L4.59929 10.8955L1.20823 6.75059L6.38799 5.39047L9.28217 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M29.2929 0.884521L32.1871 5.39047L37.3669 6.75059L33.9758 10.8955L34.2829 16.2421L29.2929 14.2979L24.3029 16.2421L24.61 10.8955L21.219 6.75059L26.3987 5.39047L29.2929 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M49.3039 0.884521L52.1981 5.39047L57.3778 6.75059L53.9868 10.8955L54.2939 16.2421L49.3039 14.2979L44.3139 16.2421L44.621 10.8955L41.23 6.75059L46.4097 5.39047L49.3039 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M69.3146 0.884521L72.2088 5.39047L77.3886 6.75059L73.9975 10.8955L74.3046 16.2421L69.3146 14.2979L64.3247 16.2421L64.6318 10.8955L61.2407 6.75059L66.4205 5.39047L69.3146 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M89.3256 0.884521L92.2198 5.39047L97.3996 6.75059L94.0085 10.8955L94.3156 16.2421L89.3256 14.2979L84.3357 16.2421L84.6427 10.8955L81.2517 6.75059L86.4314 5.39047L89.3256 0.884521Z"
+                  fill="#FBA333" />
+              </svg>
+            </div>
+
+            <div class="depoiments__carousel-card">
+              <p class="depoiments__carousel-paragraph">"A Naturalle transformou minha vida. O tratamento personalizado
+                que recebi fez toda a diferença no
+                controle da minha condição de saúde."</p>
+              <p class="depoiments__carousel-person">Maria S.</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="98" height="18" viewBox="0 0 98 18" fill="none">
+                <path
+                  d="M9.28217 0.884521L12.1764 5.39047L17.3561 6.75059L13.9651 10.8955L14.2721 16.2421L9.28217 14.2979L4.2922 16.2421L4.59929 10.8955L1.20823 6.75059L6.38799 5.39047L9.28217 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M29.2929 0.884521L32.1871 5.39047L37.3669 6.75059L33.9758 10.8955L34.2829 16.2421L29.2929 14.2979L24.3029 16.2421L24.61 10.8955L21.219 6.75059L26.3987 5.39047L29.2929 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M49.3039 0.884521L52.1981 5.39047L57.3778 6.75059L53.9868 10.8955L54.2939 16.2421L49.3039 14.2979L44.3139 16.2421L44.621 10.8955L41.23 6.75059L46.4097 5.39047L49.3039 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M69.3146 0.884521L72.2088 5.39047L77.3886 6.75059L73.9975 10.8955L74.3046 16.2421L69.3146 14.2979L64.3247 16.2421L64.6318 10.8955L61.2407 6.75059L66.4205 5.39047L69.3146 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M89.3256 0.884521L92.2198 5.39047L97.3996 6.75059L94.0085 10.8955L94.3156 16.2421L89.3256 14.2979L84.3357 16.2421L84.6427 10.8955L81.2517 6.75059L86.4314 5.39047L89.3256 0.884521Z"
+                  fill="#FBA333" />
+              </svg>
+            </div>
+
+            <div class="depoiments__carousel-card">
+              <p class="depoiments__carousel-paragraph">"1"</p>
+              <p class="depoiments__carousel-person">Maria S.</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="98" height="18" viewBox="0 0 98 18" fill="none">
+                <path
+                  d="M9.28217 0.884521L12.1764 5.39047L17.3561 6.75059L13.9651 10.8955L14.2721 16.2421L9.28217 14.2979L4.2922 16.2421L4.59929 10.8955L1.20823 6.75059L6.38799 5.39047L9.28217 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M29.2929 0.884521L32.1871 5.39047L37.3669 6.75059L33.9758 10.8955L34.2829 16.2421L29.2929 14.2979L24.3029 16.2421L24.61 10.8955L21.219 6.75059L26.3987 5.39047L29.2929 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M49.3039 0.884521L52.1981 5.39047L57.3778 6.75059L53.9868 10.8955L54.2939 16.2421L49.3039 14.2979L44.3139 16.2421L44.621 10.8955L41.23 6.75059L46.4097 5.39047L49.3039 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M69.3146 0.884521L72.2088 5.39047L77.3886 6.75059L73.9975 10.8955L74.3046 16.2421L69.3146 14.2979L64.3247 16.2421L64.6318 10.8955L61.2407 6.75059L66.4205 5.39047L69.3146 0.884521Z"
+                  fill="#FBA333" />
+                <path
+                  d="M89.3256 0.884521L92.2198 5.39047L97.3996 6.75059L94.0085 10.8955L94.3156 16.2421L89.3256 14.2979L84.3357 16.2421L84.6427 10.8955L81.2517 6.75059L86.4314 5.39047L89.3256 0.884521Z"
+                  fill="#FBA333" />
+              </svg>
+            </div>
+
+          </div>
+
+          <div class="depoiments__button-wrapper">
+            <button id="carousel-button-left" class="depoiments__button">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="124" height="41" viewBox="0 0 124 41" fill="none">
+                <rect x="-0.5" y="0.5" width="39" height="39" rx="19.5" transform="matrix(-1 0 0 1 39.7012 0.832031)"
+                  stroke="#5A154C"></rect>
+                <path
+                  d="M11.6545 21.1856C11.4592 20.9903 11.4592 20.6737 11.6545 20.4785L14.8365 17.2965C15.0317 17.1012 15.3483 17.1012 15.5436 17.2965C15.7389 17.4918 15.7389 17.8083 15.5436 18.0036L12.7152 20.832L15.5436 23.6605C15.7389 23.8557 15.7389 24.1723 15.5436 24.3676C15.3483 24.5628 15.0317 24.5628 14.8365 24.3676L11.6545 21.1856ZM29.3945 21.332L12.0081 21.332L12.0081 20.332L29.3945 20.332L29.3945 21.332Z"
+                  fill="#5A154C"></path>
+              </svg> -->
+              < </button>
+
+                <button id="carousel-button-right" class="depoiments__button">
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="124" height="41" viewBox="0 0 124 41" fill="none">
+                <rect x="83.7988" y="1.33203" width="39" height="39" rx="19.5" stroke="#5A154C"></rect>
+                <path
+                  d="M112.345 21.1856C112.541 20.9903 112.541 20.6737 112.345 20.4785L109.164 17.2965C108.968 17.1012 108.652 17.1012 108.456 17.2965C108.261 17.4918 108.261 17.8083 108.456 18.0036L111.285 20.832L108.456 23.6605C108.261 23.8557 108.261 24.1723 108.456 24.3676C108.652 24.5628 108.968 24.5628 109.164 24.3676L112.345 21.1856ZM94.6055 21.332L111.992 21.332L111.992 20.332L94.6055 20.332L94.6055 21.332Z"
+                  fill="#5A154C"></path>
+              </svg> -->
+                  >
+                </button>
+          </div>
         </div>
 
 
-        <div class="contact-cointainer">
+
+
+        <div class="contact-cointainer" id="contato">
           <div class="contact__container">
             <div class="contact__container-background-text">CONTATO</div>
             <h3 class="contact__container-tittle">Entre em Contato</h3>
@@ -290,14 +499,14 @@
               </svg>
               212035-0080
             </button>
-            <button class="contact-button">
+            <a href="https://wa.me/5521989394901" class="contact-button">
               <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
                 <path
                   d="M30.2145 7.22327C27.1662 4.16765 23.1065 2.48706 18.7923 2.48706C9.88735 2.48706 2.64116 9.73325 2.64116 18.6382C2.64116 21.4828 3.38324 24.262 4.79465 26.7138L2.50293 35.0803L11.0659 32.8323C13.4231 34.12 16.0786 34.7966 18.785 34.7966H18.7923C27.69 34.7966 35.0962 27.5504 35.0962 18.6455C35.0962 14.3312 33.2628 10.2789 30.2145 7.22327ZM18.7923 32.0757C16.3769 32.0757 14.0124 31.4282 11.9535 30.2059L11.4661 29.9149L6.38793 31.2463L7.74114 26.2918L7.42102 25.7825C6.0751 23.6436 5.36939 21.1773 5.36939 18.6382C5.36939 11.2392 11.3933 5.21529 18.7996 5.21529C22.3863 5.21529 25.7547 6.61215 28.2865 9.15122C30.8183 11.6903 32.3753 15.0588 32.368 18.6455C32.368 26.0517 26.1913 32.0757 18.7923 32.0757ZM26.1549 22.0212C25.7547 21.8175 23.7686 20.8426 23.3976 20.7117C23.0265 20.5734 22.7573 20.5079 22.4881 20.9154C22.219 21.3228 21.4478 22.2249 21.2077 22.5014C20.9749 22.7706 20.7348 22.8069 20.3347 22.6032C17.9629 21.4174 16.406 20.4861 14.8418 17.8015C14.4271 17.0886 15.2565 17.1395 16.0277 15.5971C16.1586 15.3279 16.0932 15.0951 15.9913 14.8914C15.8895 14.6877 15.0819 12.7016 14.7472 11.894C14.4199 11.1083 14.0852 11.2174 13.8378 11.2029C13.605 11.1883 13.3358 11.1883 13.0666 11.1883C12.7975 11.1883 12.3609 11.2902 11.9899 11.6903C11.6189 12.0977 10.5785 13.0726 10.5785 15.0588C10.5785 17.0449 12.0263 18.9656 12.2227 19.2348C12.4264 19.504 15.0674 23.5781 19.1197 25.3315C21.6806 26.4373 22.6846 26.5319 23.965 26.3427C24.7435 26.2263 26.3513 25.3678 26.686 24.4221C27.0206 23.4763 27.0206 22.6687 26.9188 22.5014C26.8242 22.3195 26.555 22.2176 26.1549 22.0212Z"
                   fill="white" />
               </svg>
               21 989394901
-            </button>
+            </a>
           </div>
           <p class="contact-adress">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
@@ -313,6 +522,7 @@
             </svg>
             Rua Coronel Agostinho, 76 Loja 103, Campo Grande, RJ, 23050-360
           </p>
+        </div>
       </section>
 
       </section>
@@ -324,14 +534,13 @@
           Receba Nossas Novidades</h2>\
         <p class="footer-paragraph">Assine nossa newsletter e fique por dentro das últimas novidades, promoções e dicas
           de
-          saúde da Naturalle
-          Express.</p>
+          saúde da Naturalle</p>
         <div class="footer__form">
           <input type="text" placeholder="Seu E-mail" class="footer__form-input">
           <button class="footer__form-button">Inscrever-se</button>
         </div>
         <div class="footer__credits">
-          <p class="footer__credits-paragraph">Naturalle Express - Cuidando de Você de Forma Única e Eficaz</p>
+          <p class="footer__credits-paragraph">Naturalle - Cuidando de Você de Forma Única e Eficaz</p>
           <img src="./assets/logo.png" alt="">
         </div>
       </div>
@@ -378,7 +587,7 @@
           <p class="chat__body__paragraph">Será um prazer te atender!</p>
         </div>
 
-        <button class="chat__body__button">Enviar mensagem!</button>
+        <a href="https://wa.me/5521989394901" class="chat__body__button">Enviar mensagem!</a>
       </div>
 
     </div>
