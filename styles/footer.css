@@ -1,8 +1,9 @@
 .footer {
   background: url(../assets/footer.png);
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center;
   padding-top: 50px;
+  padding-inline: 25px;
 }
 
 .footer-wrapper {
@@ -75,7 +76,13 @@
 
   padding-inline: 17px;
   padding-block: 9px
-} 
+}
+
+.footer__line {
+  border: 1px #FFFFFF solid;
+  width: 90%;
+  display: none;
+}
 
 .footer__credits {
   display: flex;
@@ -105,3 +112,71 @@
   background-color: #E6E6FA;
   clip-path: ellipse(100% 100  at 50% 0%);
 } */
+
+@media (max-width: 900px) {
+  .footer-wrapper{
+    align-items: center;
+  }
+  .footer-tittle {
+    color: #E8D9F4;
+    text-align: center;
+    font-family: Philosopher;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  .footer-paragraph {
+    color: rgba(255, 255, 255, 0.90);
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+
+    margin-bottom: 32px;
+  }
+
+  .footer__form {
+    margin-bottom: 48px;
+  }
+
+  .footer__form-input{
+    color: var(--d-9-d-9-d-9, #E8D9F4);
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .footer__form-button {
+    display: none;
+  }
+
+  .footer__line {
+    display: block;
+  }
+  
+  .footer__credits {
+    justify-content: center;
+  }
+
+  .footer__credits-paragraph {
+    width: 254px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    opacity: 0.9;
+    margin-block: 20px;
+  }
+  .footer__credits img {
+    display: none;
+  }
+}

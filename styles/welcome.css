@@ -8,6 +8,7 @@
 .welcome {
   max-width: 1100px;
   margin: 0 auto;
+  padding-inline: 25px;
 }
 
 .welcome-tittle {
@@ -28,7 +29,7 @@
   font-weight: 400;
   line-height: normal;
 
-  width: 534.161px;
+  max-width: 534.161px;
   margin-bottom: 39px;
 }
 
@@ -65,9 +66,32 @@
   font-weight: 600;
   line-height: 160%;
   opacity: 0.7;
-  width: 677.276px;
+  max-width: 677.276px;
 }
 
 .welcome__paragraph p:nth-child(1) {
   margin-bottom: 30px;
+}
+
+@media (max-width: 800px) {
+  .welcome__title {
+    color: #FFF;
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px;
+  }
+  .welcome__paragraph{
+    color: rgba(255, 255, 255, 0.90);
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  .welcome__vertical-line, .welcome__semi-tittle  {
+    display: none;
+  }
 }

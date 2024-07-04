@@ -1,3 +1,19 @@
+#contato {
+  padding-top: 123px;
+  padding-inline: 25px;
+  position: relative;
+}
+
+.contact__flower-left {
+  bottom: 17%;
+  left: 0;
+}
+
+.contact__flower-right {
+  bottom: 20%;
+  right: 0;
+}
+
 .contact-cointainer {
   max-width: 1405px;
   margin: 0 auto;
@@ -10,8 +26,8 @@
 
   padding-bottom: 65px;
   padding-top: 100px;
-
-  margin-top: 123px;
+  padding-inline: 34px;
+  z-index: 1;
 
 }
 
@@ -53,7 +69,6 @@
 
   position: relative;
   font-size: 2em;
-  z-index: 1;
 }
 
 .contact-paragraph {
@@ -91,6 +106,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  z-index: 1;
 }
 
 .contact-adress {
@@ -105,4 +121,47 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+@media (max-width: 950px) {
+  .contact__container-background-text {
+    color: rgba(255, 255, 255, 0.15);
+    text-align: center;
+    font-family: Philosopher;
+    font-size: 71.688px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .contact-paragraph {
+    color: rgba(255, 255, 255, 0.90);
+    width: 100%;
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .contact__button-wrapper{
+    flex-direction: column;
+  }
+  .hide-on-small {
+    display: none;
+  }
+  .contact-button {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 25.527px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .contact-adress {
+    color: rgba(255, 255, 255, 0.90);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+  }
 }

@@ -1,8 +1,21 @@
 .difference {
   background: #E8D9F4;
+  overflow: hidden;
+  padding-top: 140px;
+  padding-bottom: 230px;
+  position: relative;
+}
 
-  padding-top: 90px;
-  padding-bottom: 115px;
+.difference::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; /* Ajuste a altura conforme necessário */
+  background-color: #E8D9F4; /* Deve ser igual ao fundo da seção */
+  z-index: -1; /* Certifique-se de que o pseudo-elemento fique atrás do conteúdo */
+  clip-path: ellipse(70% 50% at 50% 100%);
 }
 
 .difference-tittle {
@@ -98,4 +111,28 @@
   .difference {
     padding-inline: 40px;
   }
+  .difference__card-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .difference__card-container {
+    height: 243.03px;
+  }
+  .difference__card-paragraph {
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .difference__card-container {
+    height: 100%;
+  }
+
 }

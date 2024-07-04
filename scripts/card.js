@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const rightButton = document.getElementById('carousel-button-right');
 
   const cardWidth = cards[0].getBoundingClientRect().width;
-  const cardMargin = 20; // margem entre os cards
+  const cardMargin = parseInt(getComputedStyle(cards[0]).marginLeft) * 2; // margem horizontal entre os cards
   const moveAmount = cardWidth + cardMargin;
   let currentIndex = 0;
 
