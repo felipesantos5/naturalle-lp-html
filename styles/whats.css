@@ -19,6 +19,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  z-index: 1000;
 }
 
 .chat-box-show {
@@ -137,9 +138,7 @@
     width: 80px;
   }
   .chat-box {
-
     bottom: 180px;
-
-
+    right: 35px;
   }
 }

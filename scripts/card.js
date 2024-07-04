@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const rightButton = document.getElementById('carousel-button-right');
 
   const cardWidth = cards[0].getBoundingClientRect().width;
-  const cardMargin = parseInt(getComputedStyle(cards[0]).marginLeft) * 2; // margem horizontal entre os cards
+  const cardMargin = parseInt(getComputedStyle(cards[0]).marginLeft) * 4; // margem horizontal entre os cards
   const moveAmount = cardWidth + cardMargin;
   let currentIndex = 0;
 
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         track.style.transition = 'none';
         updateCarousel();
         setTimeout(() => {
-          track.style.transition = 'transform 0.5s ease';
+          track.style.transition = 'transform 1s ease';
         }, 0);
       }, 500);
     }
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         track.style.transition = 'none';
         updateCarousel();
         setTimeout(() => {
-          track.style.transition = 'transform 0.5s ease';
+          track.style.transition = 'transform 1s ease';
         }, 0);
       }, 500);
     }
