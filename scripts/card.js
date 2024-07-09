@@ -5,16 +5,41 @@ document.addEventListener('DOMContentLoaded', function() {
   const rightButton = document.getElementById('carousel-button-right');
 
   const cardWidth = cards[0].getBoundingClientRect().width;
-  const cardMargin = parseInt(getComputedStyle(cards[0]).marginLeft) * 4; // margem horizontal entre os cards
-  const moveAmount = cardWidth + cardMargin;
+  const cardMargin = parseInt(getComputedStyle(cards[0]).marginLeft); // margem horizontal entre os cards
   let currentIndex = 0;
-  let isDragging = false;
-  let startPos = 0;
-  let currentTranslate = 0;
-  let prevTranslate = 0;
-  let animationID = 0;
-
+  
   // Clonar os primeiros e últimos elementos para criar um loop infinito
+
+  function setMoveAmount() {
+
+    let moveAmount;
+
+    if (window.innerWidth > 1200) {
+        moveAmount = cardWidth + cardMargin + 20;
+    } 
+    else if (window.innerWidth < 499) {
+        moveAmount = cardWidth + cardMargin  ;
+    }
+    else if (window.innerWidth < 600) {
+        moveAmount = cardWidth + cardMargin - 9;
+    }
+    else if (window.innerWidth < 690) {
+        moveAmount = cardWidth + cardMargin -21;
+    }
+    else if (window.innerWidth < 999) {
+        moveAmount = cardWidth + cardMargin - 15;
+    }
+    else if (window.innerWidth < 1199) {
+      moveAmount = cardWidth + cardMargin - 50;
+    }
+
+    return moveAmount;
+}
+
+  let moveAmount = setMoveAmount();
+
+  console.log(moveAmount)
+
   function cloneElements() {
     cards.forEach(card => {
       let cloneFirst = card.cloneNode(true);
@@ -79,66 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 500);
     }
   }
-
-  // Funções de arrasto
-  function touchStart(index) {
-    return function(event) {
-      isDragging = true;
-      startPos = getPositionX(event);
-      animationID = requestAnimationFrame(animation);
-      track.classList.add('grabbing');
-    }
-  }
-
-  function touchMove(event) {
-    if (isDragging) {
-      const currentPosition = getPositionX(event);
-      currentTranslate = prevTranslate + currentPosition - startPos;
-    }
-  }
-
-  function touchEnd() {
-    cancelAnimationFrame(animationID);
-    isDragging = false;
-    const movedBy = currentTranslate - prevTranslate;
-
-    if (movedBy < -100) {
-      moveRight();
-    } else if (movedBy > 100) {
-      moveLeft();
-    } else {
-      track.style.transform = `translateX(${prevTranslate}px)`;
-    }
-
-    track.classList.remove('grabbing');
-  }
-
-  function getPositionX(event) {
-    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-  }
-
-  function animation() {
-    track.style.transform = `translateX(${currentTranslate}px)`;
-    if (isDragging) requestAnimationFrame(animation);
-  }
-
-  cards.forEach((card, index) => {
-    const cardImage = card.querySelector('img');
-    card.addEventListener('dragstart', (e) => e.preventDefault());
-
-    // Touch events
-    card.addEventListener('touchstart', touchStart(index));
-    card.addEventListener('touchmove', touchMove);
-    card.addEventListener('touchend', touchEnd);
-
-    // Mouse events
-    card.addEventListener('mousedown', touchStart(index));
-    card.addEventListener('mousemove', touchMove);
-    card.addEventListener('mouseup', touchEnd);
-    card.addEventListener('mouseleave', () => {
-      if (isDragging) touchEnd();
-    });
-  });
 
   leftButton.addEventListener('click', moveLeft);
   rightButton.addEventListener('click', moveRight);

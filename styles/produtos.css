@@ -8,14 +8,26 @@
 }
 
 .products::before {
-  content: "oi";
+  content: "";
   position: absolute;
-  top: -96px; /* Ajuste a posição vertical conforme necessário */
+  top: -96px;
   left: 0;
   width: 100%;
-  height: 200px; /* Ajuste a altura conforme necessário */
-  background-color: #83ac6e; /* Deve ser igual ao fundo da seção */
-  border-radius: 100%
+  height: 200px;
+  background-color: #83ac6e;
+  border-radius: 40%
+}
+
+.products::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #83ac6e;
+  border-radius: 40%;
+  z-index: 1;
 }
 
 .products-wrapper {
@@ -71,7 +83,7 @@
 
 .products__flower-left {
   left: 0;
-  bottom: 0px;
+  bottom: 35px;
 }
 
 .products__card-wrapper {

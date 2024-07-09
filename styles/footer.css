@@ -4,6 +4,7 @@
   background-position: center;
   padding-top: 50px;
   padding-inline: 25px;
+
 }
 
 .footer-wrapper {
@@ -74,12 +75,14 @@
 }
 
 .footer__form-icon {
+  cursor: pointer;
   position: absolute;
   right: 15px;
   width: 23px;
   height: 25px;
   pointer-events: none;
   display: none;
+  z-index: 1000;
 }
 
 .footer__form-button {
