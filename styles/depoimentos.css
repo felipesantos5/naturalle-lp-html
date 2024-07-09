@@ -45,16 +45,16 @@
   margin-bottom: 113px;
 }
 
+
 .depoiments__carousel-track {
   display: flex;
+  gap: 45px;
   transition: transform 0.5s ease-in-out;
 }
 
 .depoiments__carousel-card {
   min-width: 481.57px;
-  max-width: 300px;
 
-  margin-left: 45px; 
   padding-block: 30px;
   padding-left: 45px;
   padding-right: 30px;
@@ -126,7 +126,7 @@
 
 .depoiments__button {
   background: transparent;
-  width: 30px;
+  min-width: 30px;
 }
 
 @media (max-width: 1300px) {
@@ -149,8 +149,21 @@
     font-weight: 700;
     line-height: 30px;
   }
+  .depoiments__carousel-track {
+    gap: 10px;
+  }
   .depoiments__carousel-card {
     width: 143px;
+  }
+  .depoiments__carousel-card {
+    min-width: 343px;
+  }
+  .depoiments__carousel-paragraph{
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
   }
 }
 

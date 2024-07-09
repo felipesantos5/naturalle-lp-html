@@ -8,7 +8,7 @@
 }
 
 .products::before {
-  content: "";
+  content: "oi";
   position: absolute;
   top: -96px; /* Ajuste a posição vertical conforme necessário */
   left: 0;

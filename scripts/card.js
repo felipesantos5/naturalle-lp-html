@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const cardMargin = parseInt(getComputedStyle(cards[0]).marginLeft) * 4; // margem horizontal entre os cards
   const moveAmount = cardWidth + cardMargin;
   let currentIndex = 0;
+  let isDragging = false;
+  let startPos = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let animationID = 0;
 
   // Clonar os primeiros e últimos elementos para criar um loop infinito
   function cloneElements() {
@@ -37,6 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function updateCarousel() {
     const moveBy = -moveAmount * (currentIndex + cards.length / 3);
     track.style.transform = `translateX(${moveBy}px)`;
+    cards.forEach((card, index) => {
+      card.classList.toggle("active", index === currentIndex + cards.length / 3);
+      card.classList.toggle("inactive", index !== currentIndex + cards.length / 3);
+    });
   }
 
   // Função para mover para a esquerda
@@ -70,6 +79,66 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 500);
     }
   }
+
+  // Funções de arrasto
+  function touchStart(index) {
+    return function(event) {
+      isDragging = true;
+      startPos = getPositionX(event);
+      animationID = requestAnimationFrame(animation);
+      track.classList.add('grabbing');
+    }
+  }
+
+  function touchMove(event) {
+    if (isDragging) {
+      const currentPosition = getPositionX(event);
+      currentTranslate = prevTranslate + currentPosition - startPos;
+    }
+  }
+
+  function touchEnd() {
+    cancelAnimationFrame(animationID);
+    isDragging = false;
+    const movedBy = currentTranslate - prevTranslate;
+
+    if (movedBy < -100) {
+      moveRight();
+    } else if (movedBy > 100) {
+      moveLeft();
+    } else {
+      track.style.transform = `translateX(${prevTranslate}px)`;
+    }
+
+    track.classList.remove('grabbing');
+  }
+
+  function getPositionX(event) {
+    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+  }
+
+  function animation() {
+    track.style.transform = `translateX(${currentTranslate}px)`;
+    if (isDragging) requestAnimationFrame(animation);
+  }
+
+  cards.forEach((card, index) => {
+    const cardImage = card.querySelector('img');
+    card.addEventListener('dragstart', (e) => e.preventDefault());
+
+    // Touch events
+    card.addEventListener('touchstart', touchStart(index));
+    card.addEventListener('touchmove', touchMove);
+    card.addEventListener('touchend', touchEnd);
+
+    // Mouse events
+    card.addEventListener('mousedown', touchStart(index));
+    card.addEventListener('mousemove', touchMove);
+    card.addEventListener('mouseup', touchEnd);
+    card.addEventListener('mouseleave', () => {
+      if (isDragging) touchEnd();
+    });
+  });
 
   leftButton.addEventListener('click', moveLeft);
   rightButton.addEventListener('click', moveRight);
