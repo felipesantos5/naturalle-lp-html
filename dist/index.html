@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Astro description" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="" />
+  <meta name="Naturalle" content="Naturalle" />
+  <title>Naturalle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/geral.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/whats.css">
+  <link rel="stylesheet" href="styles/welcome.css">
+  <link rel="stylesheet" href="styles/diferenciais.css">
+  <link rel="stylesheet" href="styles/produtos.css">
+  <link rel="stylesheet" href="styles/depoimentos.css">
+  <link rel="stylesheet" href="styles/entreEmContanto.css">
+  <link rel="stylesheet" href="styles/cashback.css">
+  <link rel="stylesheet" href="styles/footer.css">
+
+  <script src="/scripts/whats.js" defer></script>
+  <script src="/scripts/header.js" defer></script>
+  <script src="/scripts/card.js" defer></script>
+</head>
+
+<body>
+  <div>
+    <header class="bg-header-image">
+
+      <div class="header__line">
+        <section class="header">
+          <img src="/assets/logo.png" alt="logo Naturalle" class="header__logo" />
+          <nav class="header__nav">
+            <a href="#produtos" class="header__nav-item">Produtos</a>
+            <a href="#contato" class="header__nav-item">Contato</a>
+          </nav>
+          <button class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </button>
+        </section>
+      </div>
+
+      <div class="slide-menu" id="slideMenu">
+        <div class="slide-wrapper">
+          <div class="slide-wrapper-button">
+            <nav class="slide-menu__nav">
+              <a href="#produtos" class="header__nav-item-slide">Produtos</a>
+              <button class="hamburger" id="closeButton">
+                <div class="bar-slide"></div>
+                <div class="bar-slide"></div>
+                <div class="bar-slide"></div>
+              </button>
+          </div>
+          <a href="#contato" class="header__nav-item-slide item-2">Contato</a>
+          </nav>
+
+
+        </div>
+        <img src="/assets/Vector.png" alt="">
+      </div>
+
+
+      <div class="welcome">
+        <h1 class="welcome__title">Bem-vindo à Naturalle</h1>
+        <h2 class="welcome__semi-tittle">A Sua Saúde em Boas Mãos</h2>
+        <div class="welcome__wrapper-paragraph">
+          <hr class="welcome__vertical-line" />
+          <div class="welcome__paragraph">
+            <p>Na Naturalle, nossa missão é oferecer soluções de saúde personalizadas e de alta
+              qualidade,
+              feitas especialmente para você.</p>
+            <p>Com mais de 9 anos de experiência no mercado, somos reconhecidos pela excelência em manipulação
+              farmacêutica e pelo compromisso com o bem-estar dos nossos clientes.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+
+      <section class="difference">
+        <div class="depoiments__container">
+          <div class="depoiments__container-background-text">Diferenciais
+          </div>
+          <h2 class="difference-tittle">Nossos Diferenciais</h2>
+        </div>
+
+        <section class="difference__card-wrapper">
+
+          <div class="difference__card-container">
+            <div class="difference__card-icon background__icon1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="47" height="56" viewBox="0 0 47 56" fill="none">
+                <path
+                  d="M39.6875 9.34779C38.0675 10.3514 37.2519 12.2262 36.8639 13.5146C35.3644 14.3541 33.9738 15.3267 32.6789 16.3939C32.3776 14.9716 31.7825 12.7207 30.9142 12.0042C29.6127 10.9301 27.687 11.1145 26.613 12.416C25.5389 13.7175 25.7233 15.6432 27.0248 16.7172C27.8194 17.373 29.8338 17.5601 31.2844 17.6071C29.1123 19.6225 27.2491 21.9092 25.6503 24.2843C25.7646 23.0322 25.77 21.6611 25.3721 20.9674C24.5325 19.5036 22.6653 18.9976 21.2015 19.8373C19.7378 20.6768 19.2318 22.544 20.0715 24.0078C20.6485 25.0137 22.8836 26.0106 24.2255 26.5359C20.138 33.4133 18.134 40.5526 17.3786 43.7559C13.7715 40.6632 11.8328 36.4685 10.5998 33.6212C11.6738 34.4432 13.0071 35.309 13.8892 35.3294C15.5761 35.3682 16.9752 34.0322 17.0141 32.3451C17.053 30.6582 15.7168 29.2591 14.0299 29.2203C12.8512 29.1931 10.797 30.6354 9.66397 31.5084C9.55146 31.2745 9.44198 31.0568 9.33596 30.8751C9.00731 30.2415 8.94736 27.2136 9.03571 24.1737C10.1126 25.1312 12.0152 26.671 13.1735 26.7288C14.8588 26.8129 16.2932 25.5149 16.3773 23.8296C16.4615 22.1442 15.1635 20.7098 13.4782 20.6257C12.3129 20.5675 10.25 21.9259 9.08679 22.7705C9.13311 21.7189 9.19505 20.7095 9.26869 19.8505C9.39295 18.4323 9.64212 17.0029 9.9966 15.5862C11.1149 16.5125 12.9951 17.92 14.1266 17.9413C15.8137 17.973 17.2071 16.6309 17.2387 14.9439C17.2704 13.2567 15.9284 11.8633 14.2413 11.8317C13.2707 11.8135 11.7109 12.7946 10.5589 13.6321C11.006 12.2602 11.5527 10.9123 12.2006 9.61379C13.4707 9.17585 15.2299 8.31493 16.1569 6.72268C17.7092 4.05626 16.3286 0.358398 16.3286 0.358398C16.3286 0.358398 12.4311 0.983512 10.8789 3.64987C9.94186 5.25926 10.0744 7.23972 10.3259 8.56076C10.3195 8.57245 10.308 8.57926 10.3019 8.59128C9.6506 9.88963 9.09019 11.2351 8.62533 12.6062C8.29025 11.2856 7.77437 9.75245 7.08603 9.18439C5.78453 8.11035 3.85881 8.29475 2.78477 9.59625C1.71072 10.8977 1.89506 12.8234 3.19656 13.8975C4.09141 14.636 6.53667 14.7812 7.97728 14.7998C7.55848 16.4135 7.26491 18.0455 7.12272 19.6654C7.12117 19.6844 7.0911 20.0611 7.0512 20.6721C6.52581 19.6389 5.88245 18.628 5.24436 18.2739C3.76886 17.4552 1.90907 17.9877 1.09036 19.4633C0.27172 20.9388 0.804117 22.7986 2.27968 23.6173C3.23878 24.1495 5.45838 23.9076 6.89828 23.6732C6.80929 26.0776 6.79284 28.9868 7.10434 30.741C6.01179 29.9344 4.6513 29.0829 3.76346 29.0789C2.076 29.0712 0.701891 30.433 0.694245 32.1204C0.686664 33.8078 2.04837 35.1818 3.73577 35.1895C4.87465 35.1946 6.80512 33.8133 7.94194 32.9136C8.08002 33.2219 8.22715 33.5622 8.38579 33.9313C9.01823 35.4005 9.83784 37.3042 10.9986 39.2868C8.78943 39.3591 4.44955 40.3323 3.53479 46.7439C3.53479 46.7439 6.7009 44.5578 9.95317 44.8162C11.2655 44.9215 12.7657 43.8262 13.6546 43.0488C14.6218 44.1832 15.7405 45.2649 17.0389 46.2288C17.0961 47.3351 17.0447 50.436 15.0329 53.3314C14.6937 53.8194 14.8141 54.4904 15.3026 54.8301C15.4903 54.9604 15.7044 55.0225 15.9163 55.0225C16.257 55.0225 16.5925 54.8616 16.8018 54.5598C19.4712 50.7191 19.2503 46.6272 19.1593 45.7036C19.2568 45.2196 19.6266 43.4879 20.3617 41.0411C24.5957 39.4307 30.6298 40.6917 30.6298 40.6917C28.2978 36.4069 24.1114 36.03 22.0453 36.1312C22.9861 33.6989 24.1873 31.028 25.6947 28.3802C26.1478 29.7647 26.9141 31.7156 27.7868 32.3042C29.1858 33.2477 31.0848 32.8784 32.0283 31.4794C32.9718 30.0804 32.6025 28.1814 31.2035 27.238C30.3034 26.631 28.1072 26.6722 26.6517 26.7786C28.3809 23.9977 30.4587 21.3055 32.9489 19.0196C33.03 20.4767 33.2704 22.6495 33.9851 23.462C35.0996 24.7291 37.0302 24.8529 38.2972 23.7384C39.5643 22.624 39.688 20.6934 38.5736 19.4263C37.8637 18.6192 35.7622 18.1046 34.3278 17.8366C35.4667 16.9166 36.6799 16.0788 37.9787 15.3567C38.032 15.3271 38.0659 15.2796 38.1121 15.2428C39.4378 15.4453 41.3607 15.4955 42.9039 14.5395C45.5267 12.9146 46.0446 9.00159 46.0446 9.00159C46.0446 9.00159 42.3102 7.7229 39.6875 9.34779Z"
+                  fill="white" />
+              </svg>
+            </div>
+            <h3 class="difference__card-tittle">Qualidade e Segurança</h3>
+            <p class="difference__card-paragraph">Utilizamos apenas princípios ativos aprovados por órgãos reguladores,
+              garantindo a
+              segurança e a eficácia de todos os nossos produtos.</p>
+          </div>
+
+          <div class="difference__card-container">
+            <div class="difference__card-icon background__icon2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+                <g clip-path="url(#clip0_2002_10)">
+                  <path
+                    d="M23.6859 18.2158C23.6859 18.2158 10.7781 32.2226 9.28339 33.8428C7.79051 35.4653 4.09629 39.0357 7.6643 42.3224C11.2277 45.6104 14.1176 42.0412 15.9825 40.0154C17.8462 37.9943 30.3861 24.389 30.3861 24.389L23.6859 18.2158Z"
+                    fill="white"></path>
+                  <path
+                    d="M47.5526 15.654L30.6651 0.0893555L27.2818 3.75849L29.5378 5.83781C25.4188 10.3078 9.32353 27.7692 7.2257 30.0496L6.83633 30.468C4.92035 32.5205 1.71254 35.9514 1.86015 39.9066C1.93629 41.9253 2.88244 43.7884 4.67401 45.4376C6.45284 47.0787 8.32403 47.9109 10.2341 47.9109C14.0829 47.9109 17.1047 44.5961 19.3124 42.1799L42.1167 17.4294L44.1717 19.3233L47.5526 15.654ZM18.0519 40.0286L17.5533 40.5749C15.6443 42.6645 13.0322 45.5306 10.234 45.5306C8.92242 45.5306 7.63119 44.9263 6.28771 43.6872C4.96155 42.4647 4.29151 41.1989 4.23925 39.8146C4.12887 36.8534 6.91237 33.8733 8.57505 32.0928L8.97596 31.6639C11.0767 29.3802 27.1749 11.9146 31.2893 7.45152L40.3652 15.8168L18.0519 40.0286Z"
+                    fill="white"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_2002_10">
+                    <rect width="47.8216" height="47.8216" fill="white" transform="translate(0.792969 0.0893555)">
+                    </rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h3 class="difference__card-tittle">Personalização</h3>
+            <p class="difference__card-paragraph">Cada formulação é feita de forma personalizada para atender às suas
+              necessidades
+              específicas, proporcionando um cuidado único e eficaz.</p>
+          </div>
+
+          <div class="difference__card-container">
+            <div class="difference__card-icon background__icon3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="51" height="40" viewBox="0 0 51 40" fill="none">
+                <g clip-path="url(#clip0_2002_41)">
+                  <path
+                    d="M8.10282 17.5225C10.8367 17.5225 13.0594 15.2998 13.0594 12.566C13.0594 9.83211 10.8367 7.6094 8.10282 7.6094C5.36896 7.6094 3.14625 9.83211 3.14625 12.566C3.14625 15.2998 5.36896 17.5225 8.10282 17.5225ZM42.7988 17.5225C45.5326 17.5225 47.7554 15.2998 47.7554 12.566C47.7554 9.83211 45.5326 7.6094 42.7988 7.6094C40.0649 7.6094 37.8422 9.83211 37.8422 12.566C37.8422 15.2998 40.0649 17.5225 42.7988 17.5225ZM45.2771 20.0008H40.3205C38.9575 20.0008 37.7261 20.5507 36.8277 21.4413C39.9488 23.1529 42.1637 26.243 42.6439 29.914H47.7554C49.1262 29.914 50.2336 28.8065 50.2336 27.4357V24.9574C50.2336 22.2235 48.0109 20.0008 45.2771 20.0008ZM25.4508 20.0008C30.2447 20.0008 34.1248 16.1208 34.1248 11.3268C34.1248 6.53289 30.2447 2.65283 25.4508 2.65283C20.6569 2.65283 16.7768 6.53289 16.7768 11.3268C16.7768 16.1208 20.6569 20.0008 25.4508 20.0008ZM31.3987 22.4791H30.7559C29.145 23.2536 27.356 23.7182 25.4508 23.7182C23.5456 23.7182 21.7644 23.2536 20.1457 22.4791H19.5029C14.5773 22.4791 10.5811 26.4753 10.5811 31.4009V33.6314C10.5811 35.6837 12.2462 37.3488 14.2985 37.3488H36.6031C38.6554 37.3488 40.3205 35.6837 40.3205 33.6314V31.4009C40.3205 26.4753 36.3243 22.4791 31.3987 22.4791ZM14.0739 21.4413C13.1756 20.5507 11.9442 20.0008 10.5811 20.0008H5.62454C2.89068 20.0008 0.667969 22.2235 0.667969 24.9574V27.4357C0.667969 28.8065 1.77545 29.914 3.14625 29.914H8.24997C8.73788 26.243 10.9528 23.1529 14.0739 21.4413Z"
+                    fill="white"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_2002_41">
+                    <rect width="49.5657" height="39.6525" fill="white" transform="translate(0.667969 0.174316)"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h3 class="difference__card-tittle">Atendimento Especializado</h3>
+            <p class="difference__card-paragraph">Nossa equipe de farmacêuticos está sempre disponível para oferecer
+              orientação e suporte
+              personalizado.</p>
+          </div>
+        </section>
+      </section>
+
+      <section class="products" id="produtos">
+        <img src="assets/flowers/products-right.svg" alt="flor na direita" class="products__flower-right flower">
+        <img src="assets/flowers/products-left.svg" alt="flor na esquerda" class="products__flower-left flower">
+        <div class="products-wrapper">
+          <h2 class="products-title">Produtos & Tratamentos</h2>
+          <p class="products-paragraph">Na Naturalle, oferecemos uma ampla gama de produtos e tratamentos
+            personalizados para diversas condições de saúde, incluindo:</p>
+
+          <section class="products__card-wrapper">
+
+            <div class="products__card-container">
+              <img src="assets/card-produtos/1.png" alt="pernas com Lipedema" class="products__card-img" />
+              <div class="products__card-wrapper-text">
+                <h3 class="products__card-title">Dores nas Articulações</h3>
+                <div class="products__card-circle">
+                  <p class="products__card-circle-text">UC II</p>
+                  <p class="products__card-circle-text">MOVE</p>
+                  <p class="products__card-circle-text">Curcuma Longa</p>
+                </div>
+                <p class="products__card-paragraph">Cada formulação é feita de forma personalizada para atender às suas
+                  dores
+                  específicas, proporcionando qualidade de vida, disposição e saúde.</p>
+                <div class="products__card-bottle-wrapper">
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil " />
+                </div>
+              </div>
+            </div>
+
+            <div class="products__card-container">
+              <img src="assets/card-produtos/2.png" alt="pernas com Lipedema" class="products__card-img" />
+              <div class="products__card-wrapper-text">
+                <h3 class="products__card-title">Lipedema</h3>
+                <div class="products__card-circle">
+                  <p class="products__card-circle-text">Resvitech</p>
+                </div>
+                <p class="products__card-paragraph">Fórmulas que não se resumem apenas para a estética e sim para
+                  solucionar suas dores, inchaços, cansaço e hematomas.</p>
+                <div class="products__card-bottle-wrapper">
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil " />
+                </div>
+              </div>
+            </div>
+
+            <div class="products__card-container">
+              <img src="assets/card-produtos/3.png" alt="pernas com Lipedema" class="products__card-img" />
+              <div class="products__card-wrapper-text">
+                <h3 class="products__card-title">Controle de Peso</h3>
+                <div class="products__card-circle">
+                  <p class="products__card-circle-text">Morosil</p>
+                  <p class="products__card-circle-text">Akkermat</p>
+                </div>
+                <p class="products__card-paragraph">Formulação personalizada para lhe ajudar a manter o peso ideal, com
+                  saúde e eficácia.</p>
+                <div class="products__card-bottle-wrapper">
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil " />
+                </div>
+              </div>
+            </div>
+
+            <div class="products__card-container">
+              <img src="assets/card-produtos/4.png" alt="pernas com Lipedema" class="products__card-img" />
+              <div class="products__card-wrapper-text">
+                <h3 class="products__card-title">Saúde da Pele</h3>
+                <div class="products__card-circle">
+                  <p class="products__card-circle-text">Nutricolin</p>
+                  <p class="products__card-circle-text">Exynutriment</p>
+                </div>
+                <p class="products__card-paragraph">Fórmulas personalizadas com o segredo para ter uma pele saudável!
+                </p>
+                <div class="products__card-bottle-wrapper">
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil" />
+                  <img src="/assets/card-produtos/frasco.svg" alt="produto naturalle morosil " />
+                </div>
+              </div>
+
+            </div>
+
+            <div class="products__card-container">
+              <img src="assets/card-produtos/5.png" alt="pernas com Lipedema" class="products__card-img" />
+              <div class="products__card-wrapper-text">
+                <h3 class="products__card-title">Dores nas Articulações</h3>
+                <p class="products__card-paragraph">Cada formulação é feita de forma personalizada para atender às suas
+                  necessidades específicas, proporcionando um cuidado único e eficaz.</p>
+              </div>
+            </div>
+
+          </section>
+          <div class="products__footer">
+            <h4 class="products__footer-tittle">Para mais informações, consulte um de nossos farmacêuticos</h4>
+            <div class="products__footer-wrapper">
+
+              <button class="products__footer-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37" fill="none">
+                  <path
+                    d="M7.40126 22.1554L10.4046 20.0235C11.2142 19.4411 12.1239 19.0123 13.0883 18.7585C14.2134 18.4588 14.7176 17.8439 14.7176 16.5328C14.7176 13.2051 22.4028 12.8516 22.4028 16.5328C22.4028 17.8439 22.907 18.4588 24.0321 18.7569C25.0189 19.0213 25.8765 19.4256 26.7157 20.0235L29.7191 22.1538C31.0763 23.1191 31.7096 23.5848 32.0616 24.3272C32.3936 25.025 32.3936 25.8427 32.3936 27.4781C32.3936 30.42 32.3936 31.891 31.5697 32.8332C30.5722 33.9752 27.9792 33.8784 26.3868 33.8784H10.7336C9.1412 33.8784 6.60046 34.0367 5.55066 32.8332C4.72681 31.891 4.72681 30.42 4.72681 27.4781C4.72681 25.8427 4.72681 25.025 5.05881 24.3272C5.41233 23.5863 6.04252 23.1191 7.40126 22.1538"
+                    stroke="white" stroke-width="2.30557" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M10.8134 5.75324C8.78762 6.33117 7.33051 7.04897 5.99635 7.91586C3.88599 9.2869 2.98067 11.7569 3.22967 14.1409C3.33419 15.1492 4.14421 15.6318 5.08181 15.3705C5.795 15.1707 6.50819 14.9786 7.21677 14.7695C9.28716 14.1547 9.77441 13.4077 10.0618 11.2881L10.8134 5.75324ZM10.8134 5.75324C15.8227 4.32379 21.2976 4.32379 26.3068 5.75324M26.3068 5.75324C28.3327 6.33117 29.7898 7.04897 31.1239 7.91586C33.2343 9.2869 34.1396 11.7569 33.8906 14.1409C33.7861 15.1492 32.9761 15.6318 32.0385 15.3705C31.3268 15.1707 30.6121 14.9786 29.9035 14.7695C27.8331 14.1547 27.3459 13.4077 27.0585 11.2881L26.3068 5.75324ZM21.6342 26.199C21.6342 27.0143 21.3104 27.7962 20.7339 28.3727C20.1574 28.9492 19.3754 29.2731 18.5601 29.2731C17.7448 29.2731 16.9629 28.9492 16.3864 28.3727C15.8099 27.7962 15.4861 27.0143 15.4861 26.199C15.4861 25.3837 15.8099 24.6018 16.3864 24.0253C16.9629 23.4488 17.7448 23.1249 18.5601 23.1249C19.3754 23.1249 20.1574 23.4488 20.7339 24.0253C21.3104 24.6018 21.6342 25.3837 21.6342 26.199Z"
+                    stroke="white" stroke-width="2.30557" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg> 21 2035-0080
+              </button>
+
+              <a href="https://wa.me/5521989394901" class="products__footer-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                  <path
+                    d="M30.2145 7.30652C27.1662 4.2509 23.1065 2.57031 18.7923 2.57031C9.88735 2.57031 2.64116 9.8165 2.64116 18.7214C2.64116 21.5661 3.38324 24.3452 4.79465 26.797L2.50293 35.1636L11.0659 32.9155C13.4231 34.2033 16.0786 34.8799 18.785 34.8799H18.7923C27.69 34.8799 35.0962 27.6337 35.0962 18.7287C35.0962 14.4145 33.2628 10.3621 30.2145 7.30652ZM18.7923 32.1589C16.3769 32.1589 14.0124 31.5114 11.9535 30.2892L11.4661 29.9981L6.38793 31.3295L7.74114 26.3751L7.42102 25.8658C6.0751 23.7268 5.36939 21.2605 5.36939 18.7214C5.36939 11.3225 11.3933 5.29855 18.7996 5.29855C22.3863 5.29855 25.7547 6.6954 28.2865 9.23448C30.8183 11.7736 32.3753 15.142 32.368 18.7287C32.368 26.135 26.1913 32.1589 18.7923 32.1589ZM26.1549 22.1045C25.7547 21.9008 23.7686 20.9259 23.3976 20.7949C23.0265 20.6567 22.7573 20.5912 22.4881 20.9986C22.219 21.406 21.4478 22.3082 21.2077 22.5846C20.9749 22.8538 20.7348 22.8902 20.3347 22.6865C17.9629 21.5006 16.406 20.5694 14.8418 17.8848C14.4271 17.1718 15.2565 17.2227 16.0277 15.6804C16.1586 15.4112 16.0932 15.1784 15.9913 14.9747C15.8895 14.771 15.0819 12.7848 14.7472 11.9773C14.4199 11.1915 14.0852 11.3007 13.8378 11.2861C13.605 11.2716 13.3358 11.2716 13.0666 11.2716C12.7975 11.2716 12.3609 11.3734 11.9899 11.7736C11.6189 12.181 10.5785 13.1559 10.5785 15.142C10.5785 17.1282 12.0263 19.0488 12.2227 19.318C12.4264 19.5872 15.0674 23.6614 19.1197 25.4147C21.6806 26.5206 22.6846 26.6151 23.965 26.426C24.7435 26.3096 26.3513 25.4511 26.686 24.5053C27.0206 23.5595 27.0206 22.752 26.9188 22.5846C26.8242 22.4027 26.555 22.3009 26.1549 22.1045Z"
+                    fill="white"></path>
+                </svg>
+                21 989394901
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+
+      </section>
+
+      <section class="depoiments">
+
+        <div class="depoiments__container">
+          <div class="depoiments__container-background-text">Depoimentos
+          </div>
+          <h3 class="depoiments__container-tittle">Depoimentos de Clientes
+          </h3>
+        </div>
+
+        <div class="depoiments__carousel">
+          <div class="depoiments__carousel-track">
+
+            <div class="depoiments__carousel-card">
+              <p class="depoiments__carousel-paragraph">"A Naturalle transformou minha vida. O tratamento personalizado
+                que recebi fez toda a diferença no
+                controle da minha condição de saúde."</p>
+              <div class="depoiments__corousel-wrapper-text">
+                <p class="depoiments__carousel-person">Maria S.</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="98" height="18" viewBox="0 0 98 18" fill="none">
+                  <path
+                    d="M9.28217 0.884521L12.1764 5.39047L17.3561 6.75059L13.9651 10.8955L14.2721 16.2421L9.28217 14.2979L4.2922 16.2421L4.59929 10.8955L1.20823 6.75059L6.38799 5.39047L9.28217 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M29.2929 0.884521L32.1871 5.39047L37.3669 6.75059L33.9758 10.8955L34.2829 16.2421L29.2929 14.2979L24.3029 16.2421L24.61 10.8955L21.219 6.75059L26.3987 5.39047L29.2929 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M49.3039 0.884521L52.1981 5.39047L57.3778 6.75059L53.9868 10.8955L54.2939 16.2421L49.3039 14.2979L44.3139 16.2421L44.621 10.8955L41.23 6.75059L46.4097 5.39047L49.3039 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M69.3146 0.884521L72.2088 5.39047L77.3886 6.75059L73.9975 10.8955L74.3046 16.2421L69.3146 14.2979L64.3247 16.2421L64.6318 10.8955L61.2407 6.75059L66.4205 5.39047L69.3146 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M89.3256 0.884521L92.2198 5.39047L97.3996 6.75059L94.0085 10.8955L94.3156 16.2421L89.3256 14.2979L84.3357 16.2421L84.6427 10.8955L81.2517 6.75059L86.4314 5.39047L89.3256 0.884521Z"
+                    fill="#FBA333" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="depoiments__carousel-card">
+              <p class="depoiments__carousel-paragraph">"A Naturalle trouxe uma grande mudança para minha vida. O
+                cuidado personalizado que recebi foi crucial para o controle da minha saúde."</p>
+              <div class="depoiments__corousel-wrapper-text">
+                <p class="depoiments__carousel-person">Julia Ramos</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="98" height="18" viewBox="0 0 98 18" fill="none">
+                  <path
+                    d="M9.28217 0.884521L12.1764 5.39047L17.3561 6.75059L13.9651 10.8955L14.2721 16.2421L9.28217 14.2979L4.2922 16.2421L4.59929 10.8955L1.20823 6.75059L6.38799 5.39047L9.28217 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M29.2929 0.884521L32.1871 5.39047L37.3669 6.75059L33.9758 10.8955L34.2829 16.2421L29.2929 14.2979L24.3029 16.2421L24.61 10.8955L21.219 6.75059L26.3987 5.39047L29.2929 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M49.3039 0.884521L52.1981 5.39047L57.3778 6.75059L53.9868 10.8955L54.2939 16.2421L49.3039 14.2979L44.3139 16.2421L44.621 10.8955L41.23 6.75059L46.4097 5.39047L49.3039 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M69.3146 0.884521L72.2088 5.39047L77.3886 6.75059L73.9975 10.8955L74.3046 16.2421L69.3146 14.2979L64.3247 16.2421L64.6318 10.8955L61.2407 6.75059L66.4205 5.39047L69.3146 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M89.3256 0.884521L92.2198 5.39047L97.3996 6.75059L94.0085 10.8955L94.3156 16.2421L89.3256 14.2979L84.3357 16.2421L84.6427 10.8955L81.2517 6.75059L86.4314 5.39047L89.3256 0.884521Z"
+                    fill="#FBA333" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="depoiments__carousel-card">
+              <p class="depoiments__carousel-paragraph">"Sempre me sinto seguro com os produtos da Naturalle. A
+                qualidade e o atendimento são incomparáveis."</p>
+              <div class="depoiments__corousel-wrapper-text">
+                <p class="depoiments__carousel-person">João P.</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="98" height="18" viewBox="0 0 98 18" fill="none">
+                  <path
+                    d="M9.28217 0.884521L12.1764 5.39047L17.3561 6.75059L13.9651 10.8955L14.2721 16.2421L9.28217 14.2979L4.2922 16.2421L4.59929 10.8955L1.20823 6.75059L6.38799 5.39047L9.28217 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M29.2929 0.884521L32.1871 5.39047L37.3669 6.75059L33.9758 10.8955L34.2829 16.2421L29.2929 14.2979L24.3029 16.2421L24.61 10.8955L21.219 6.75059L26.3987 5.39047L29.2929 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M49.3039 0.884521L52.1981 5.39047L57.3778 6.75059L53.9868 10.8955L54.2939 16.2421L49.3039 14.2979L44.3139 16.2421L44.621 10.8955L41.23 6.75059L46.4097 5.39047L49.3039 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M69.3146 0.884521L72.2088 5.39047L77.3886 6.75059L73.9975 10.8955L74.3046 16.2421L69.3146 14.2979L64.3247 16.2421L64.6318 10.8955L61.2407 6.75059L66.4205 5.39047L69.3146 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M89.3256 0.884521L92.2198 5.39047L97.3996 6.75059L94.0085 10.8955L94.3156 16.2421L89.3256 14.2979L84.3357 16.2421L84.6427 10.8955L81.2517 6.75059L86.4314 5.39047L89.3256 0.884521Z"
+                    fill="#FBA333" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="depoiments__carousel-card">
+              <p class="depoiments__carousel-paragraph">"Sou cliente fiel da naturalle e sempre compro via
+                Tele-atendimento... É perfeito! As meninas são sempre atenciosas e me atendem super bem"</p>
+              <div class="depoiments__corousel-wrapper-text">
+                <p class="depoiments__carousel-person">Ana Beatriz</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="98" height="18" viewBox="0 0 98 18" fill="none">
+                  <path
+                    d="M9.28217 0.884521L12.1764 5.39047L17.3561 6.75059L13.9651 10.8955L14.2721 16.2421L9.28217 14.2979L4.2922 16.2421L4.59929 10.8955L1.20823 6.75059L6.38799 5.39047L9.28217 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M29.2929 0.884521L32.1871 5.39047L37.3669 6.75059L33.9758 10.8955L34.2829 16.2421L29.2929 14.2979L24.3029 16.2421L24.61 10.8955L21.219 6.75059L26.3987 5.39047L29.2929 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M49.3039 0.884521L52.1981 5.39047L57.3778 6.75059L53.9868 10.8955L54.2939 16.2421L49.3039 14.2979L44.3139 16.2421L44.621 10.8955L41.23 6.75059L46.4097 5.39047L49.3039 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M69.3146 0.884521L72.2088 5.39047L77.3886 6.75059L73.9975 10.8955L74.3046 16.2421L69.3146 14.2979L64.3247 16.2421L64.6318 10.8955L61.2407 6.75059L66.4205 5.39047L69.3146 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M89.3256 0.884521L92.2198 5.39047L97.3996 6.75059L94.0085 10.8955L94.3156 16.2421L89.3256 14.2979L84.3357 16.2421L84.6427 10.8955L81.2517 6.75059L86.4314 5.39047L89.3256 0.884521Z"
+                    fill="#FBA333" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="depoiments__carousel-card">
+              <p class="depoiments__carousel-paragraph">"Comprava na naturalle sempre no ponto físico, e até que me
+                recomendaram o atendimento via telefone e fiquei fascinado! Super rápido, seguro e eficaz... indico e
+                não troco por outro lugar"</p>
+              <div class="depoiments__corousel-wrapper-text">
+                <p class="depoiments__carousel-person">Giovana</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="98" height="18" viewBox="0 0 98 18" fill="none">
+                  <path
+                    d="M9.28217 0.884521L12.1764 5.39047L17.3561 6.75059L13.9651 10.8955L14.2721 16.2421L9.28217 14.2979L4.2922 16.2421L4.59929 10.8955L1.20823 6.75059L6.38799 5.39047L9.28217 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M29.2929 0.884521L32.1871 5.39047L37.3669 6.75059L33.9758 10.8955L34.2829 16.2421L29.2929 14.2979L24.3029 16.2421L24.61 10.8955L21.219 6.75059L26.3987 5.39047L29.2929 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M49.3039 0.884521L52.1981 5.39047L57.3778 6.75059L53.9868 10.8955L54.2939 16.2421L49.3039 14.2979L44.3139 16.2421L44.621 10.8955L41.23 6.75059L46.4097 5.39047L49.3039 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M69.3146 0.884521L72.2088 5.39047L77.3886 6.75059L73.9975 10.8955L74.3046 16.2421L69.3146 14.2979L64.3247 16.2421L64.6318 10.8955L61.2407 6.75059L66.4205 5.39047L69.3146 0.884521Z"
+                    fill="#FBA333" />
+                  <path
+                    d="M89.3256 0.884521L92.2198 5.39047L97.3996 6.75059L94.0085 10.8955L94.3156 16.2421L89.3256 14.2979L84.3357 16.2421L84.6427 10.8955L81.2517 6.75059L86.4314 5.39047L89.3256 0.884521Z"
+                    fill="#FBA333" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="depoiments__button-wrapper">
+            <button id="carousel-button-left" class="depoiments__button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+                <rect x="2.5" y="2.5" width="39" height="39" rx="19.5" stroke="#5A154C"></rect>
+                <path
+                  d="M11.6545 23.6856C11.4592 23.4903 11.4592 23.1737 11.6545 22.9785L14.8365 19.7965C15.0317 19.6012 15.3483 19.6012 15.5436 19.7965C15.7389 19.9918 15.7389 20.3083 15.5436 20.5036L12.7152 23.332L15.5436 26.1605C15.7389 26.3557 15.7389 26.6723 15.5436 26.8676C15.3483 27.0628 15.0317 27.0628 14.8365 26.8676L11.6545 23.6856ZM29.3945 23.832L12.0081 23.832L12.0081 22.832L29.3945 22.832L29.3945 23.832Z"
+                  fill="#5A154C"></path>
+              </svg>
+            </button>
+            <button id="carousel-button-right" class="depoiments__button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+                <rect x="3" y="3" width="39" height="39" rx="19.5" stroke="#5A154C"></rect>
+                <path
+                  d="M28.345 23.1856C28.541 22.9903 28.541 22.6737 28.345 22.4785L25.164 19.2965C24.968 19.1012 24.652 19.1012 24.456 19.2965C24.261 19.4918 24.261 19.8083 24.456 20.0036L27.285 22.832L24.456 25.6605C24.261 25.8557 24.261 26.1723 24.456 26.3676C24.652 26.5628 24.968 26.5628 25.164 26.3676L28.345 23.1856ZM10.6055 23.332L27.992 23.332L27.992 22.332L10.6055 22.332L10.6055 23.332Z"
+                  fill="#5A154C"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="contato">
+          <img src="assets/flowers/contact-left.svg" alt="flor na esquerda" class="contact__flower-left flower">
+          <img src="assets/flowers/contact-right.svg" alt="flor na esquerda" class="contact__flower-right flower">
+          <div class="contact-cointainer">
+            <div class="contact__container">
+              <div class="contact__container-background-text">CONTATO</div>
+              <h3 class="contact__container-tittle">Entre em Contato</h3>
+            </div>
+            <p class="contact-paragraph">Estamos aqui para ajudar! Entre em contato conosco para saber mais sobre nossos
+              produtos e serviços ou
+              agendar uma consulta farmacêutica.
+            </p>
+            <div class="contact__button-wrapper">
+              <button class="contact-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="38" viewBox="0 0 37 38" fill="none"
+                  class="test">
+                  <path
+                    d="M7.40126 23.0721L10.4046 20.9402C11.2142 20.3578 12.1239 19.9291 13.0883 19.6752C14.2134 19.3755 14.7176 18.7607 14.7176 17.4496C14.7176 14.1219 22.4028 13.7684 22.4028 17.4496C22.4028 18.7607 22.907 19.3755 24.0321 19.6737C25.0189 19.9381 25.8765 20.3423 26.7157 20.9402L29.7191 23.0706C31.0763 24.0358 31.7096 24.5015 32.0616 25.2439C32.3936 25.9418 32.3936 26.7595 32.3936 28.3949C32.3936 31.3368 32.3936 32.8077 31.5697 33.7499C30.5722 34.892 27.9792 34.7951 26.3868 34.7951H10.7336C9.1412 34.7951 6.60046 34.9534 5.55066 33.7499C4.72681 32.8077 4.72681 31.3368 4.72681 28.3949C4.72681 26.7595 4.72681 25.9418 5.05881 25.2439C5.41233 24.5031 6.04252 24.0358 7.40126 23.0706"
+                    stroke="white" stroke-width="2.30557" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M10.8134 6.67023C8.78762 7.24816 7.33051 7.96596 5.99635 8.83285C3.88599 10.2039 2.98067 12.6739 3.22967 15.0579C3.33419 16.0662 4.14421 16.5488 5.08181 16.2875C5.795 16.0877 6.50819 15.8956 7.21677 15.6865C9.28716 15.0717 9.77441 14.3247 10.0618 12.2051L10.8134 6.67023ZM10.8134 6.67023C15.8227 5.24078 21.2976 5.24078 26.3068 6.67023M26.3068 6.67023C28.3327 7.24816 29.7898 7.96596 31.1239 8.83285C33.2343 10.2039 34.1396 12.6739 33.8906 15.0579C33.7861 16.0662 32.9761 16.5488 32.0385 16.2875C31.3268 16.0877 30.6121 15.8956 29.9035 15.6865C27.8331 15.0717 27.3459 14.3247 27.0585 12.2051L26.3068 6.67023ZM21.6342 27.116C21.6342 27.9313 21.3104 28.7132 20.7339 29.2897C20.1574 29.8662 19.3754 30.1901 18.5601 30.1901C17.7448 30.1901 16.9629 29.8662 16.3864 29.2897C15.8099 28.7132 15.4861 27.9313 15.4861 27.116C15.4861 26.3007 15.8099 25.5188 16.3864 24.9423C16.9629 24.3658 17.7448 24.0419 18.5601 24.0419C19.3754 24.0419 20.1574 24.3658 20.7339 24.9423C21.3104 25.5188 21.6342 26.3007 21.6342 27.116Z"
+                    stroke="white" stroke-width="2.30557" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                212035-0080
+              </button>
+              <a href="https://wa.me/5521989394901" class="contact-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                  <path
+                    d="M30.2145 7.22327C27.1662 4.16765 23.1065 2.48706 18.7923 2.48706C9.88735 2.48706 2.64116 9.73325 2.64116 18.6382C2.64116 21.4828 3.38324 24.262 4.79465 26.7138L2.50293 35.0803L11.0659 32.8323C13.4231 34.12 16.0786 34.7966 18.785 34.7966H18.7923C27.69 34.7966 35.0962 27.5504 35.0962 18.6455C35.0962 14.3312 33.2628 10.2789 30.2145 7.22327ZM18.7923 32.0757C16.3769 32.0757 14.0124 31.4282 11.9535 30.2059L11.4661 29.9149L6.38793 31.2463L7.74114 26.2918L7.42102 25.7825C6.0751 23.6436 5.36939 21.1773 5.36939 18.6382C5.36939 11.2392 11.3933 5.21529 18.7996 5.21529C22.3863 5.21529 25.7547 6.61215 28.2865 9.15122C30.8183 11.6903 32.3753 15.0588 32.368 18.6455C32.368 26.0517 26.1913 32.0757 18.7923 32.0757ZM26.1549 22.0212C25.7547 21.8175 23.7686 20.8426 23.3976 20.7117C23.0265 20.5734 22.7573 20.5079 22.4881 20.9154C22.219 21.3228 21.4478 22.2249 21.2077 22.5014C20.9749 22.7706 20.7348 22.8069 20.3347 22.6032C17.9629 21.4174 16.406 20.4861 14.8418 17.8015C14.4271 17.0886 15.2565 17.1395 16.0277 15.5971C16.1586 15.3279 16.0932 15.0951 15.9913 14.8914C15.8895 14.6877 15.0819 12.7016 14.7472 11.894C14.4199 11.1083 14.0852 11.2174 13.8378 11.2029C13.605 11.1883 13.3358 11.1883 13.0666 11.1883C12.7975 11.1883 12.3609 11.2902 11.9899 11.6903C11.6189 12.0977 10.5785 13.0726 10.5785 15.0588C10.5785 17.0449 12.0263 18.9656 12.2227 19.2348C12.4264 19.504 15.0674 23.5781 19.1197 25.3315C21.6806 26.4373 22.6846 26.5319 23.965 26.3427C24.7435 26.2263 26.3513 25.3678 26.686 24.4221C27.0206 23.4763 27.0206 22.6687 26.9188 22.5014C26.8242 22.3195 26.555 22.2176 26.1549 22.0212Z"
+                    fill="white" />
+                </svg>
+                21 989394901
+              </a>
+            </div>
+            <p class="contact-adress">
+
+              <svg class="hide-on-small" xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34"
+                fill="none">
+                <path
+                  d="M7.8328 23.3699C5.31764 24.1244 3.7627 25.1666 3.7627 26.3179C3.7627 28.6204 9.98388 30.4866 17.6586 30.4866C25.3333 30.4866 31.5545 28.6204 31.5545 26.3179C31.5545 25.1666 29.9988 24.1244 27.4844 23.3699"
+                  stroke="#83AC6E" stroke-width="2.77918" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M17.6585 24.928C17.6585 24.928 26.6909 19.025 26.6909 12.2008C26.6909 7.33444 22.6472 3.3894 17.6585 3.3894C12.6699 3.3894 8.62622 7.33444 8.62622 12.2008C8.62622 19.025 17.6585 24.928 17.6585 24.928Z"
+                  stroke="#83AC6E" stroke-width="2.77918" stroke-linejoin="round" />
+                <path
+                  d="M17.6585 15.8959C18.5799 15.8959 19.4635 15.5299 20.115 14.8784C20.7665 14.2269 21.1325 13.3433 21.1325 12.422C21.1325 11.5006 20.7665 10.617 20.115 9.9655C19.4635 9.314 18.5799 8.948 17.6585 8.948C16.7372 8.948 15.8536 9.314 15.2021 9.9655C14.5506 10.617 14.1846 11.5006 14.1846 12.422C14.1846 13.3433 14.5506 14.2269 15.2021 14.8784C15.8536 15.5299 16.7372 15.8959 17.6585 15.8959Z"
+                  stroke="#83AC6E" stroke-width="2.77918" stroke-linejoin="round" />
+              </svg>
+              Rua Coronel Agostinho, 76 Loja 103, Campo Grande, RJ, 23050-360
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cashback">
+        <div class="cashback-wrapper">
+          <div class="cashback__text_wrapper">
+            <h2 class="cashback__text_tittle">Economize com Saúde: Cashback em Medicamentos!</h2>
+            <p class="cashback__text_paragraph">Aproveite 5% de cashback em todas as compras de medicamentos usando o
+              Cartão de Todos. Nosso site aceita este cartão, proporcionando uma maneira fácil e econômica de cuidar da
+              sua saúde. Não perca essa oportunidade de economizar!</p>
+          </div>
+          <img src="assets/cartaodetodos.png" alt="cartão de todos" class="cashback-img">
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer curve-bottom">
+      <div class="footer-wrapper">
+        <h2 class="footer-tittle">Cadastre-se &
+          Receba Nossas Novidades</h2>
+        <p class="footer-paragraph">Assine nossa newsletter e fique por dentro das últimas novidades, promoções e dicas
+          de
+          saúde da Naturalle</p>
+
+        <div class="footer__form">
+          <div class="footer__form-input-wrapper">
+            <input type="text" placeholder="Seu E-mail" class="footer__form-input">
+            <svg class="footer__form-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25"
+              fill="none">
+              <path
+                d="M3.37671 13.4747H8.95394V11.4747H3.37671V2.32072C3.37672 2.23383 3.39778 2.14845 3.43781 2.07299C3.47784 1.99752 3.53546 1.93458 3.60498 1.89037C3.67451 1.84616 3.75354 1.8222 3.8343 1.82086C3.91505 1.81952 3.99474 1.84084 4.0655 1.88272L21.2267 12.0367C21.2995 12.0799 21.3603 12.1433 21.4026 12.2203C21.4449 12.2974 21.4673 12.3852 21.4673 12.4747C21.4673 12.5642 21.4449 12.6521 21.4026 12.7291C21.3603 12.8061 21.2995 12.8696 21.2267 12.9127L4.0655 23.0667C3.99474 23.1086 3.91505 23.1299 3.8343 23.1286C3.75354 23.1272 3.67451 23.1033 3.60498 23.0591C3.53546 23.0148 3.47784 22.9519 3.43781 22.8764C3.39778 22.801 3.37672 22.7156 3.37671 22.6287V13.4747Z"
+                fill="white" />
+            </svg>
+          </div>
+          <button class="footer__form-button">Inscrever-se</button>
+
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.252689310963!2d-43.56215658817778!3d-22.9040487791705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9be1f00009ad7f%3A0x22421b656b88d4f8!2sR.%20Cel.%20Agostinho%2C%2076%20-%20103%20-%20Campo%20Grande%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2023050-360!5e0!3m2!1spt-BR!2sbr!4v1719952608586!5m2!1spt-BR!2sbr"
+          width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" class="map-test"></iframe>
+
+
+        <hr class="footer__line">
+
+        <div class="footer__credits">
+          <p class="footer__credits-paragraph">Naturalle - Cuidando de Você de Forma Única e Eficaz</p>
+          <img src="./assets/logo.png" alt="logo Naturalle">
+        </div>
+      </div>
+    </footer>
+
+    <img src="/assets/whatsButton.svg" alt="botão do WhatsApp" class="whatsapp-button" id="toggleButton">
+
+    <div class="chat-box" id="chatBox">
+      <div class="chat__header">
+        <button class="chat__header__button-close" id="closeButtonWhats">
+          <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Group 138" opacity="0.5">
+              <rect id="Rectangle 126" x="0.330078" y="1.82715" width="1.91412" height="9.91887"
+                transform="rotate(-45 0.330078 1.82715)" fill="white" />
+              <rect id="Rectangle 127" x="0.330078" y="1.82715" width="1.91412" height="9.91887"
+                transform="rotate(-45 0.330078 1.82715)" fill="white" />
+              <rect id="Rectangle 128" width="1.91412" height="9.91887"
+                transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 8.69727 1.82715)" fill="white" />
+            </g>
+          </svg>
+        </button>
+
+        <div>
+          <div class="chat__header__wrapper">
+            <h3 class="chat__header__title">Naturalle</h3>
+            <p class="chat__header__paragraph">Farmácia de manipulação</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat__body">
+        <div class="chat__body__box ">
+          <p class="chat__body__paragraph">Seja bem-vindo à farmácia de manipulação <span
+              class="chat__body__paragraph-strong">Naturalle!</span></p>
+          <p class="chat__body__paragraph">Estamos à disposição para lhe atender. <span
+              class="chat__body__paragraph-strong">Envie uma foto da sua receita</span>, e em breve retornaremos com seu
+            orçamento.</p>
+          <p class="chat__body__paragraph">Conheça, também, nossos produtos de <span
+              class="chat__body__paragraph-strong">prescrição farmacêutica!</span></p>
+          <p class="chat__body__paragraph">Será um prazer te atender!</p>
+        </div>
+        <a href="https://wa.me/5521989394901" class="chat__body__button">Enviar mensagem!</a>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
